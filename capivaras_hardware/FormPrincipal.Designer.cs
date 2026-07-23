@@ -88,7 +88,7 @@ namespace capivaras_hardware
             this.mnBtnCadCli.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadCli.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadCli.Name = "mnBtnCadCli";
-            this.mnBtnCadCli.Size = new System.Drawing.Size(180, 22);
+            this.mnBtnCadCli.Size = new System.Drawing.Size(160, 22);
             this.mnBtnCadCli.Text = "Clientes";
             this.mnBtnCadCli.Click += new System.EventHandler(this.btnCadCliMenu_Click);
             // 
@@ -97,7 +97,7 @@ namespace capivaras_hardware
             this.mnBtnCadFun.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadFun.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadFun.Name = "mnBtnCadFun";
-            this.mnBtnCadFun.Size = new System.Drawing.Size(180, 22);
+            this.mnBtnCadFun.Size = new System.Drawing.Size(160, 22);
             this.mnBtnCadFun.Text = "Funcionarios";
             this.mnBtnCadFun.Click += new System.EventHandler(this.cadFuncionarios_Click);
             // 
@@ -106,7 +106,7 @@ namespace capivaras_hardware
             this.mnBtnCadCar.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadCar.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadCar.Name = "mnBtnCadCar";
-            this.mnBtnCadCar.Size = new System.Drawing.Size(180, 22);
+            this.mnBtnCadCar.Size = new System.Drawing.Size(160, 22);
             this.mnBtnCadCar.Text = "Cargos";
             this.mnBtnCadCar.Click += new System.EventHandler(this.cadCargo_Click);
             // 
@@ -115,7 +115,7 @@ namespace capivaras_hardware
             this.mnBtnCadPro.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadPro.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadPro.Name = "mnBtnCadPro";
-            this.mnBtnCadPro.Size = new System.Drawing.Size(180, 22);
+            this.mnBtnCadPro.Size = new System.Drawing.Size(160, 22);
             this.mnBtnCadPro.Text = "Produtos";
             this.mnBtnCadPro.Click += new System.EventHandler(this.mnBtnCadPro_Click);
             // 
@@ -124,7 +124,7 @@ namespace capivaras_hardware
             this.mnBtnCadCat.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadCat.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadCat.Name = "mnBtnCadCat";
-            this.mnBtnCadCat.Size = new System.Drawing.Size(180, 22);
+            this.mnBtnCadCat.Size = new System.Drawing.Size(160, 22);
             this.mnBtnCadCat.Text = "Categorias";
             this.mnBtnCadCat.Click += new System.EventHandler(this.mnBtnCadCat_Click);
             // 
@@ -133,7 +133,7 @@ namespace capivaras_hardware
             this.mnBtnCadMar.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadMar.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadMar.Name = "mnBtnCadMar";
-            this.mnBtnCadMar.Size = new System.Drawing.Size(180, 22);
+            this.mnBtnCadMar.Size = new System.Drawing.Size(160, 22);
             this.mnBtnCadMar.Text = "Marcas";
             this.mnBtnCadMar.Click += new System.EventHandler(this.mnBtnCadMar_Click);
             // 
