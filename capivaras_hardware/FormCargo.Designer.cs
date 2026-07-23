@@ -1,0 +1,279 @@
+﻿
+namespace capivaras_hardware
+{
+    partial class FormCargo
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbDataCadastro = new System.Windows.Forms.Label();
+            this.rdbStatusInativo = new System.Windows.Forms.RadioButton();
+            this.rdbStatusAtivo = new System.Windows.Forms.RadioButton();
+            this.tbxObs = new System.Windows.Forms.TextBox();
+            this.txbNome = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.plFundoGb = new System.Windows.Forms.Panel();
+            this.plFundoFormulario = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.label30 = new System.Windows.Forms.Label();
+            this.groupBox1.SuspendLayout();
+            this.plFundoGb.SuspendLayout();
+            this.plFundoFormulario.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.Controls.Add(this.lbDataCadastro);
+            this.groupBox1.Controls.Add(this.rdbStatusInativo);
+            this.groupBox1.Controls.Add(this.rdbStatusAtivo);
+            this.groupBox1.Controls.Add(this.tbxObs);
+            this.groupBox1.Controls.Add(this.txbNome);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.plFundoGb);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.Location = new System.Drawing.Point(71, 81);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(801, 475);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Dados do Cargo";
+            // 
+            // lbDataCadastro
+            // 
+            this.lbDataCadastro.AutoSize = true;
+            this.lbDataCadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.lbDataCadastro.Location = new System.Drawing.Point(208, 329);
+            this.lbDataCadastro.Name = "lbDataCadastro";
+            this.lbDataCadastro.Size = new System.Drawing.Size(89, 20);
+            this.lbDataCadastro.TabIndex = 16;
+            this.lbDataCadastro.Text = "00/00/0000";
+            // 
+            // rdbStatusInativo
+            // 
+            this.rdbStatusInativo.AutoSize = true;
+            this.rdbStatusInativo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.rdbStatusInativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbStatusInativo.ForeColor = System.Drawing.Color.White;
+            this.rdbStatusInativo.Location = new System.Drawing.Point(134, 258);
+            this.rdbStatusInativo.Name = "rdbStatusInativo";
+            this.rdbStatusInativo.Size = new System.Drawing.Size(68, 22);
+            this.rdbStatusInativo.TabIndex = 15;
+            this.rdbStatusInativo.Text = "Inativo";
+            this.rdbStatusInativo.UseVisualStyleBackColor = false;
+            // 
+            // rdbStatusAtivo
+            // 
+            this.rdbStatusAtivo.AutoSize = true;
+            this.rdbStatusAtivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.rdbStatusAtivo.Checked = true;
+            this.rdbStatusAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbStatusAtivo.ForeColor = System.Drawing.Color.White;
+            this.rdbStatusAtivo.Location = new System.Drawing.Point(16, 258);
+            this.rdbStatusAtivo.Name = "rdbStatusAtivo";
+            this.rdbStatusAtivo.Size = new System.Drawing.Size(58, 22);
+            this.rdbStatusAtivo.TabIndex = 14;
+            this.rdbStatusAtivo.TabStop = true;
+            this.rdbStatusAtivo.Text = "Ativo";
+            this.rdbStatusAtivo.UseVisualStyleBackColor = false;
+            // 
+            // tbxObs
+            // 
+            this.tbxObs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.tbxObs.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxObs.Location = new System.Drawing.Point(16, 164);
+            this.tbxObs.Name = "tbxObs";
+            this.tbxObs.Size = new System.Drawing.Size(417, 29);
+            this.tbxObs.TabIndex = 5;
+            // 
+            // txbNome
+            // 
+            this.txbNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.txbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbNome.Location = new System.Drawing.Point(16, 70);
+            this.txbNome.Name = "txbNome";
+            this.txbNome.Size = new System.Drawing.Size(257, 29);
+            this.txbNome.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label4.Location = new System.Drawing.Point(22, 329);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 20);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Data de Cadastro";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label3.Location = new System.Drawing.Point(22, 235);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 20);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Status";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label2.Location = new System.Drawing.Point(22, 141);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(94, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Observação";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label1.Location = new System.Drawing.Point(22, 47);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nome";
+            // 
+            // plFundoGb
+            // 
+            this.plFundoGb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.plFundoGb.Controls.Add(this.label30);
+            this.plFundoGb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plFundoGb.Location = new System.Drawing.Point(3, 22);
+            this.plFundoGb.Name = "plFundoGb";
+            this.plFundoGb.Size = new System.Drawing.Size(795, 450);
+            this.plFundoGb.TabIndex = 17;
+            // 
+            // plFundoFormulario
+            // 
+            this.plFundoFormulario.BackColor = System.Drawing.Color.Black;
+            this.plFundoFormulario.Controls.Add(this.label9);
+            this.plFundoFormulario.Controls.Add(this.btnLimpar);
+            this.plFundoFormulario.Controls.Add(this.groupBox1);
+            this.plFundoFormulario.Controls.Add(this.btnCadastrar);
+            this.plFundoFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.plFundoFormulario.Location = new System.Drawing.Point(0, 0);
+            this.plFundoFormulario.Name = "plFundoFormulario";
+            this.plFundoFormulario.Size = new System.Drawing.Size(1152, 750);
+            this.plFundoFormulario.TabIndex = 1;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(34, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(215, 16);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Formulário de Cadastro de Cargos\r\n";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpar.Location = new System.Drawing.Point(604, 627);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(120, 38);
+            this.btnLimpar.TabIndex = 11;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
+            this.btnCadastrar.Location = new System.Drawing.Point(430, 620);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(120, 53);
+            this.btnCadastrar.TabIndex = 10;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.DarkRed;
+            this.label30.Location = new System.Drawing.Point(69, 20);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(17, 24);
+            this.label30.TabIndex = 30;
+            this.label30.Text = "*";
+            // 
+            // FormCargo
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1152, 750);
+            this.Controls.Add(this.plFundoFormulario);
+            this.Name = "FormCargo";
+            this.Text = "formCargo";
+            this.Load += new System.EventHandler(this.FormCargo_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.plFundoGb.ResumeLayout(false);
+            this.plFundoGb.PerformLayout();
+            this.plFundoFormulario.ResumeLayout(false);
+            this.plFundoFormulario.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox tbxObs;
+        private System.Windows.Forms.TextBox txbNome;
+        private System.Windows.Forms.RadioButton rdbStatusInativo;
+        private System.Windows.Forms.RadioButton rdbStatusAtivo;
+        private System.Windows.Forms.Label lbDataCadastro;
+        private System.Windows.Forms.Panel plFundoFormulario;
+        private System.Windows.Forms.Panel plFundoGb;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label30;
+    }
+}
