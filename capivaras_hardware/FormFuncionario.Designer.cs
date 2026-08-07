@@ -371,6 +371,7 @@ namespace capivaras_hardware
             // cmbEstadoCivil
             // 
             this.cmbEstadoCivil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEstadoCivil.FormattingEnabled = true;
             this.cmbEstadoCivil.Items.AddRange(new object[] {
@@ -769,6 +770,7 @@ namespace capivaras_hardware
             // cmbEstado
             // 
             this.cmbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.cmbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstado.FormattingEnabled = true;
             this.cmbEstado.Location = new System.Drawing.Point(15, 507);
             this.cmbEstado.Name = "cmbEstado";

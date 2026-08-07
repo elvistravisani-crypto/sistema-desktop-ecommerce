@@ -42,11 +42,11 @@ namespace capivaras_hardware
             this.plFundoGb = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.plFundoFormulario = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.plFundoGb.SuspendLayout();
             this.plFundoFormulario.SuspendLayout();
@@ -207,17 +207,6 @@ namespace capivaras_hardware
             this.plFundoFormulario.Size = new System.Drawing.Size(909, 605);
             this.plFundoFormulario.TabIndex = 1;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(34, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(215, 16);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Formulário de Cadastro de Cargos\r\n";
-            // 
             // btnExcluir
             // 
             this.btnExcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
@@ -253,6 +242,7 @@ namespace capivaras_hardware
             this.btnCadastrar.TabIndex = 23;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnLimpar
             // 
@@ -265,6 +255,17 @@ namespace capivaras_hardware
             this.btnLimpar.TabIndex = 22;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(34, 9);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(215, 16);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Formulário de Cadastro de Cargos\r\n";
             // 
             // FormCargo
             // 
