@@ -561,12 +561,12 @@ namespace capivaras_hardware
             // 
             this.rdbStatusInativo.AutoSize = true;
             this.rdbStatusInativo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.rdbStatusInativo.Enabled = false;
             this.rdbStatusInativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbStatusInativo.Location = new System.Drawing.Point(140, 17);
             this.rdbStatusInativo.Name = "rdbStatusInativo";
             this.rdbStatusInativo.Size = new System.Drawing.Size(68, 22);
             this.rdbStatusInativo.TabIndex = 36;
-            this.rdbStatusInativo.TabStop = true;
             this.rdbStatusInativo.Text = "Inativo";
             this.rdbStatusInativo.UseVisualStyleBackColor = false;
             // 
@@ -574,7 +574,9 @@ namespace capivaras_hardware
             // 
             this.rdbStatusAtivo.AutoSize = true;
             this.rdbStatusAtivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.rdbStatusAtivo.CheckAlign = System.Drawing.ContentAlignment.TopLeft;
             this.rdbStatusAtivo.Checked = true;
+            this.rdbStatusAtivo.Enabled = false;
             this.rdbStatusAtivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbStatusAtivo.Location = new System.Drawing.Point(3, 17);
             this.rdbStatusAtivo.Name = "rdbStatusAtivo";

@@ -80,7 +80,7 @@ namespace capivaras_hardware
         public int CadastrarFuncionario()
         {
             //CRIAR A VARIÁVEL PARA COLOCAR O COMANDO QUE SERÁ USADO
-            string sql = $"INSERT INTO funcionario VALUES(0, {codigo_cargo}, '{nome}', '{nome_social}','{foto}', '{data_nascimento.ToString("yyyy-MM-dd")}', '{sexo}',  '{estado_civil}', '{cpf}','{rg}', '{salario.ToString().Replace(",", ".")}', '{endereco}', {numero}, '{complemento}', '{bairro}', '{cidade}', '{estado}', '{cep}', '{telefone_residencial}', '{telefone_celular}', '{email}', '{usuario}', '{senha}', {tipo_acesso}, {status}, NOW() );   ";
+            string sql = $"INSERT INTO funcionario VALUES(0, {codigo_cargo}, '{nome}', '{nome_social}','{foto}', '{data_nascimento.ToString("yyyy-MM-dd")}', '{sexo}',  '{estado_civil}', '{cpf}','{rg}', '{salario.ToString().Replace(",", ".")}', '{endereco}', {numero}, '{complemento}', '{bairro}', '{cidade}', '{estado}', '{cep}', '{telefone_residencial}', '{telefone_celular}', '{email}', '{usuario}', '{senha}', {tipo_acesso}, 1, NOW() );   ";
 
             classConexao cConexao = new classConexao();
 
