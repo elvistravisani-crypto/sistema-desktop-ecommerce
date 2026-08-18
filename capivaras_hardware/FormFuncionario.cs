@@ -118,7 +118,7 @@ namespace capivaras_hardware
             classFuncionario cFuncionario = new classFuncionario();
 
             //VERIFICAR SE TODOS OS CAMPOS OBRIGATÓRIOS FORAM PREENCHIDOS PELO USUÁRIO
-            if (string.IsNullOrWhiteSpace(txbNome.Text) || mtxbDataNascimento.Text == "  /  /" || mtxbCpf.Text == "   .   .   -  " || string.IsNullOrWhiteSpace(txbRua.Text) || string.IsNullOrWhiteSpace(txbNumero.Text) || string.IsNullOrWhiteSpace(txbBairro.Text) || string.IsNullOrWhiteSpace(txbCidade.Text) || mtxbCep.Text == "     -" || mtxbTelefoneCelular.Text == "(  )     -" || mtxbTelefoneFixo.Text == "(  )    -  " || string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbUsuario.Text) || string.IsNullOrWhiteSpace(txbSenha.Text) || cmbCargo.SelectedIndex == -1) 
+            if (string.IsNullOrWhiteSpace(txbNome.Text) || mtxbDataNascimento.Text == "  /  /    " || mtxbCpf.Text == "   .   .   -  " || string.IsNullOrWhiteSpace(txbRua.Text) || string.IsNullOrWhiteSpace(txbNumero.Text) || string.IsNullOrWhiteSpace(txbBairro.Text) || string.IsNullOrWhiteSpace(txbCidade.Text) || mtxbCep.Text == "     -   " || mtxbTelefoneCelular.Text == "(  )     -    " || mtxbTelefoneFixo.Text == "(  )    -    " || string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbUsuario.Text) || string.IsNullOrWhiteSpace(txbSenha.Text) || cmbCargo.SelectedIndex == -1) 
             {
                 MessageBox.Show("Favor verificar todos os campos obrigatórios", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 CamposObrigatorios();
@@ -155,7 +155,7 @@ namespace capivaras_hardware
                 cFuncionario.cpf = mtxbCpf.Text;
 
                 //RG - MÁSCARA CAMPO NÃO OBRIGATÓRIO, FAZER IF CASO USUÁRIO NÃO PREENCHA O CAMPO PARA MANDAR VAZIO NO BD E NÃO A MÁSCARA
-                if (mtxbRg.Text == "  .   .   -")
+                if (mtxbRg.Text == "  .   .   - ")
                 {
                     cFuncionario.rg = "";
                 }
@@ -183,7 +183,7 @@ namespace capivaras_hardware
                 cFuncionario.cep = mtxbCep.Text;
 
                 //CAMPOS TELEFONE - MASCARA CAMPO NÃO OBRIGATÓRIO NO BD, FAZER IF PARA NÃO IR A MÁSCARA PARA O BD, CASO USUÁRIO NÃO PREENCHA
-                if (mtxbTelefoneFixo.Text == "(  )    -")
+                if (mtxbTelefoneFixo.Text == "(  )    -    ")
                 {
                     cFuncionario.telefone_residencial = "";
                 }
@@ -192,7 +192,7 @@ namespace capivaras_hardware
                     cFuncionario.telefone_residencial = mtxbTelefoneFixo.Text;
                 }
 
-                if (mtxbTelefoneCelular.Text == "(  )     -")
+                if (mtxbTelefoneCelular.Text == "(  )     -    ")
                 {
                     cFuncionario.telefone_celular = "";
                 }
