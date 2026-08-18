@@ -32,6 +32,7 @@ namespace capivaras_hardware
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormFuncionario));
             this.gbFuncDadosPessoais = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label37 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -59,7 +60,7 @@ namespace capivaras_hardware
             this.btnSelecionarImagem = new System.Windows.Forms.Button();
             this.rdbSxMasculino = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbSexo = new System.Windows.Forms.Label();
             this.mtxbDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -67,8 +68,8 @@ namespace capivaras_hardware
             this.panel3 = new System.Windows.Forms.Panel();
             this.rdbStatusInativo = new System.Windows.Forms.RadioButton();
             this.rdbStatusAtivo = new System.Windows.Forms.RadioButton();
-            this.label17 = new System.Windows.Forms.Label();
-            this.rdbTipoAcessoAdm = new System.Windows.Forms.RadioButton();
+            this.lbTipoAcesso = new System.Windows.Forms.Label();
+            this.rdbTipoAcessoAdministrador = new System.Windows.Forms.RadioButton();
             this.rdbTipoAcessoComum = new System.Windows.Forms.RadioButton();
             this.txbSenha = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -135,6 +136,7 @@ namespace capivaras_hardware
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel2.Controls.Add(this.radioButton1);
             this.panel2.Controls.Add(this.label37);
             this.panel2.Controls.Add(this.label30);
             this.panel2.Controls.Add(this.label29);
@@ -162,7 +164,7 @@ namespace capivaras_hardware
             this.panel2.Controls.Add(this.btnSelecionarImagem);
             this.panel2.Controls.Add(this.rdbSxMasculino);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.lbSexo);
             this.panel2.Controls.Add(this.mtxbDataNascimento);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -170,6 +172,18 @@ namespace capivaras_hardware
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(430, 762);
             this.panel2.TabIndex = 20;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(238, 420);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(125, 22);
+            this.radioButton1.TabIndex = 51;
+            this.radioButton1.Text = "Não Informado";
+            this.radioButton1.UseVisualStyleBackColor = false;
             // 
             // label37
             // 
@@ -422,6 +436,7 @@ namespace capivaras_hardware
             // 
             this.rdbSxFeminino.AutoSize = true;
             this.rdbSxFeminino.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.rdbSxFeminino.Checked = true;
             this.rdbSxFeminino.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbSxFeminino.Location = new System.Drawing.Point(125, 417);
             this.rdbSxFeminino.Name = "rdbSxFeminino";
@@ -452,7 +467,6 @@ namespace capivaras_hardware
             this.rdbSxMasculino.Name = "rdbSxMasculino";
             this.rdbSxMasculino.Size = new System.Drawing.Size(94, 22);
             this.rdbSxMasculino.TabIndex = 12;
-            this.rdbSxMasculino.TabStop = true;
             this.rdbSxMasculino.Text = "Masculino";
             this.rdbSxMasculino.UseVisualStyleBackColor = false;
             // 
@@ -466,15 +480,15 @@ namespace capivaras_hardware
             this.label3.TabIndex = 4;
             this.label3.Text = "Data de Nascimento";
             // 
-            // label5
+            // lbSexo
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.label5.Location = new System.Drawing.Point(15, 385);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 20);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Sexo";
+            this.lbSexo.AutoSize = true;
+            this.lbSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.lbSexo.Location = new System.Drawing.Point(15, 385);
+            this.lbSexo.Name = "lbSexo";
+            this.lbSexo.Size = new System.Drawing.Size(45, 20);
+            this.lbSexo.TabIndex = 9;
+            this.lbSexo.Text = "Sexo";
             // 
             // mtxbDataNascimento
             // 
@@ -492,8 +506,8 @@ namespace capivaras_hardware
             this.groupBox1.Controls.Add(this.label19);
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.rdbTipoAcessoAdm);
+            this.groupBox1.Controls.Add(this.lbTipoAcesso);
+            this.groupBox1.Controls.Add(this.rdbTipoAcessoAdministrador);
             this.groupBox1.Controls.Add(this.rdbTipoAcessoComum);
             this.groupBox1.Controls.Add(this.txbSenha);
             this.groupBox1.Controls.Add(this.label16);
@@ -570,28 +584,28 @@ namespace capivaras_hardware
             this.rdbStatusAtivo.Text = "Ativo";
             this.rdbStatusAtivo.UseVisualStyleBackColor = false;
             // 
-            // label17
+            // lbTipoAcesso
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.label17.Location = new System.Drawing.Point(27, 342);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(118, 20);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "Tipo de Acesso";
+            this.lbTipoAcesso.AutoSize = true;
+            this.lbTipoAcesso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.lbTipoAcesso.Location = new System.Drawing.Point(27, 342);
+            this.lbTipoAcesso.Name = "lbTipoAcesso";
+            this.lbTipoAcesso.Size = new System.Drawing.Size(118, 20);
+            this.lbTipoAcesso.TabIndex = 36;
+            this.lbTipoAcesso.Text = "Tipo de Acesso";
             // 
-            // rdbTipoAcessoAdm
+            // rdbTipoAcessoAdministrador
             // 
-            this.rdbTipoAcessoAdm.AutoSize = true;
-            this.rdbTipoAcessoAdm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.rdbTipoAcessoAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbTipoAcessoAdm.Location = new System.Drawing.Point(166, 372);
-            this.rdbTipoAcessoAdm.Name = "rdbTipoAcessoAdm";
-            this.rdbTipoAcessoAdm.Size = new System.Drawing.Size(117, 22);
-            this.rdbTipoAcessoAdm.TabIndex = 35;
-            this.rdbTipoAcessoAdm.TabStop = true;
-            this.rdbTipoAcessoAdm.Text = "Administrador";
-            this.rdbTipoAcessoAdm.UseVisualStyleBackColor = false;
+            this.rdbTipoAcessoAdministrador.AutoSize = true;
+            this.rdbTipoAcessoAdministrador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.rdbTipoAcessoAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbTipoAcessoAdministrador.Location = new System.Drawing.Point(166, 372);
+            this.rdbTipoAcessoAdministrador.Name = "rdbTipoAcessoAdministrador";
+            this.rdbTipoAcessoAdministrador.Size = new System.Drawing.Size(117, 22);
+            this.rdbTipoAcessoAdministrador.TabIndex = 35;
+            this.rdbTipoAcessoAdministrador.TabStop = true;
+            this.rdbTipoAcessoAdministrador.Text = "Administrador";
+            this.rdbTipoAcessoAdministrador.UseVisualStyleBackColor = false;
             // 
             // rdbTipoAcessoComum
             // 
@@ -1020,6 +1034,7 @@ namespace capivaras_hardware
             this.btnCadastrar.TabIndex = 23;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnLimpar
             // 
@@ -1075,7 +1090,7 @@ namespace capivaras_hardware
         #endregion
 
         private System.Windows.Forms.GroupBox gbFuncDadosPessoais;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbSexo;
         private System.Windows.Forms.Button btnSelecionarImagem;
         private System.Windows.Forms.PictureBox pbxFoto;
         private System.Windows.Forms.Label label4;
@@ -1106,8 +1121,8 @@ namespace capivaras_hardware
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.RadioButton rdbStatusInativo;
         private System.Windows.Forms.RadioButton rdbStatusAtivo;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.RadioButton rdbTipoAcessoAdm;
+        private System.Windows.Forms.Label lbTipoAcesso;
+        private System.Windows.Forms.RadioButton rdbTipoAcessoAdministrador;
         private System.Windows.Forms.RadioButton rdbTipoAcessoComum;
         private System.Windows.Forms.TextBox txbSenha;
         private System.Windows.Forms.Label label16;
@@ -1153,5 +1168,6 @@ namespace capivaras_hardware
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
