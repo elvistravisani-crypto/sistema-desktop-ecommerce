@@ -12,9 +12,40 @@ namespace capivaras_hardware
 {
     public partial class FormFuncionario : Form
     {
+        //MÉTODO PARA LIMPAR TODOS OS CAMPOS DO FORMULÁRIO QUANDO O CADASTRO FOR FINALIZADO////////////
+        private void Limpar()
+        {
+            txbNome.Clear();
+            txbNomeSocial.Clear();
+            mtxbDataNascimento.Clear();
+            rdbSxFeminino.Checked = true;
+            cmbEstadoCivil.SelectedIndex = 0; //SELECIONE ESTADO CIVIL
+            mtxbCpf.Clear();
+            mtxbRg.Clear();
+            txbSalario.Clear();
+            txbRua.Clear();
+            txbNumero.Clear();
+            txbComplemento.Clear();
+            txbBairro.Clear();
+            txbCidade.Clear();
+            cmbEstado.SelectedItem = "SP";
+            mtxbCep.Clear();
+            mtxbTelefoneFixo.Clear();
+            mtxbTelefoneCelular.Clear();
+            txbEmail.Clear();
+            txbUsuario.Clear();
+            txbSenha.Clear();
+            rdbTipoAcessoComum.Checked = true; //COMUM
+            cmbCargo.SelectedIndex = -1; //NENHUM CARGO PRÉ SELECIONADO
+
+        }
+        
+
+
         public FormFuncionario()
         {
             InitializeComponent();
+
         }
 
         private void FormFuncionario_Load(object sender, EventArgs e)
@@ -73,8 +104,8 @@ namespace capivaras_hardware
             cmbEstado.Sorted = true;
             cmbEstado.SelectedItem = "SP";
 
-            //CMB CARGO - TRAZER DADOS DA TABELA CARGO DO BANDO DE DADOS
-            //CREIAR OBJETO DA CLASSE CARGO PARA USAR O MÉTODO QUE VAI CARREGAR A COMBO
+            //CMB CARGO - TRAZER DADOS DA TABELA CARGO DO BANCO DE DADOS
+            //CRIAR OBJETO DA CLASSE CARGO PARA USAR O MÉTODO QUE VAI CARREGAR A COMBO
 
             classCargo cCargo = new classCargo();
             //CHAMAR O MÉTODO NA COMBO DE CARGO
@@ -90,19 +121,25 @@ namespace capivaras_hardware
         //MÉTODO PARA PINTAR OS CAMPOS OBRIGATÓRIOS NO FORM
         private void CamposObrigatorios()
         {
-            txbNome.BackColor = Color.FromArgb(194, 239, 232);
-            mtxbDataNascimento.BackColor = Color.FromArgb(194, 239, 232);
-            lbSexo.BackColor = Color.FromArgb(194, 239, 232);
-            mtxbCpf.BackColor = Color.FromArgb(194, 239, 232);
-            txbRua.BackColor = Color.FromArgb(194, 239, 232);
-            txbNumero.BackColor = Color.FromArgb(194, 239, 232);
-            txbBairro.BackColor = Color.FromArgb(194, 239, 232);
-            txbCidade.BackColor = Color.FromArgb(194, 239, 232);
-            cmbEstado.BackColor = Color.FromArgb(194, 239, 232);
-            mtxbTelefoneCelular.BackColor = Color.FromArgb(194, 239, 232);
-            mtxbTelefoneFixo.BackColor = Color.FromArgb(194, 239, 232);
-            lbTipoAcesso.BackColor = Color.FromArgb(194, 239, 232);
-            cmbCargo.BackColor = Color.FromArgb(194, 239, 232);
+            txbNome.BackColor = Color.FromArgb(188, 143, 143);
+            mtxbDataNascimento.BackColor = Color.FromArgb(188, 143, 143);
+            lbSexo.BackColor = Color.FromArgb(188, 143, 143);
+            mtxbCpf.BackColor = Color.FromArgb(188, 143, 143);
+            txbRua.BackColor = Color.FromArgb(188, 143, 143);
+            txbNumero.BackColor = Color.FromArgb(188, 143, 143);
+            txbBairro.BackColor = Color.FromArgb(188, 143, 143);
+            txbCidade.BackColor = Color.FromArgb(188, 143, 143);
+            cmbEstado.BackColor = Color.FromArgb(188, 143, 143);
+            mtxbTelefoneCelular.BackColor = Color.FromArgb(188, 143, 143);
+            mtxbTelefoneFixo.BackColor = Color.FromArgb(188, 143, 143);
+            lbTipoAcesso.BackColor = Color.FromArgb(188, 143, 143);
+            cmbCargo.BackColor = Color.FromArgb(188, 143, 143);
+            txbEmail.BackColor = Color.FromArgb(188, 143, 143);
+            mtxbCep.BackColor = Color.FromArgb(188, 143, 143);
+            lbEstado.BackColor = Color.FromArgb(188, 143, 143);
+            txbUsuario.BackColor = Color.FromArgb(188, 143, 143);
+            txbSenha.BackColor = Color.FromArgb(188, 143, 143);
+            lbCargo.BackColor = Color.FromArgb(188, 143, 143);
             txbNome.Focus();
 
 
@@ -136,10 +173,15 @@ namespace capivaras_hardware
                 {
                     cFuncionario.sexo = "F";
                 }
-               else if (rdbSxMasculino.Checked)
+                else if (rdbSxMasculino.Checked)
                 {
                     cFuncionario.sexo = "M";
                 }
+                else 
+                {
+                    cFuncionario.sexo = "N";
+                }
+
          
 
                 //ESTADO CIVIL - COMBO PRÉ SELECIONADA COM A OPÇÃO SELECIONE UM ESTADO CIVIL, FAZER IF SE OPÇÃO PADRÃO ESTIVER SELECIONADA MANDAR VAZIO PARA O BANCO
@@ -241,33 +283,22 @@ namespace capivaras_hardware
             }
         }
 
-        //MÉTODO APRA LIMPAR TODOS OS CAMPOS DO FORMULÁRIO QUANDO O CADASTRO FOR FINALIZADO////////////
-        private void Limpar()
+        private void txbSalario_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txbNome.Clear();
-            txbNomeSocial.Clear();
-            mtxbDataNascimento.Clear();
-            rdbSxFeminino.Checked = true;
-            cmbEstadoCivil.SelectedIndex = 0; //SELECIONE ESTADO CIVIL
-            mtxbCpf.Clear();
-            mtxbRg.Clear();
-            txbSalario.Clear();
-            txbRua.Clear();
-            txbNumero.Clear();
-            txbComplemento.Clear();
-            txbBairro.Clear();
-            txbCidade.Clear();
-            cmbEstado.SelectedItem = "SP";
-            mtxbCep.Clear();
-            mtxbTelefoneFixo.Clear();
-            mtxbTelefoneCelular.Clear();
-            txbEmail.Clear();
-            txbUsuario.Clear();
-            txbSenha.Clear();
-            rdbTipoAcessoComum.Checked = true; //COMUM
-            cmbCargo.SelectedIndex = -1; //NENHUM CARGO PRÉ SELECIONADO
-
+           
+                // SÓ ACEITA A TECLA BACKSPACE E DIGITOS, SE NÃO FOR NÃO EXIBE
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    //IMMPEDE QUE O EVENTO SEJA EXEBIDO
+                    e.Handled = true;
+                }
+            
         }
 
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            //BTN LIMPAR CHAMA O MÉTODO PARA LIMPAR TODO O FORMULÁRIO
+            Limpar();
+        }
     }
 }
