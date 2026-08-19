@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="classCargo.cs" />
+    <Compile Include="classCategoria.cs" />
     <Compile Include="classConexao.cs" />
     <Compile Include="classFuncionario.cs" />
     <Compile Include="FormCargo.cs">

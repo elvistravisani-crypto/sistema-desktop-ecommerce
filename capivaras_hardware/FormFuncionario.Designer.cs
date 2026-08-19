@@ -682,7 +682,7 @@ namespace capivaras_hardware
             this.cmbCargo.FormattingEnabled = true;
             this.cmbCargo.Location = new System.Drawing.Point(26, 54);
             this.cmbCargo.Name = "cmbCargo";
-            this.cmbCargo.Size = new System.Drawing.Size(161, 28);
+            this.cmbCargo.Size = new System.Drawing.Size(243, 28);
             this.cmbCargo.TabIndex = 28;
             // 
             // label13
