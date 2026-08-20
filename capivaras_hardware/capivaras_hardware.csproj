@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="classCargo.cs" />
     <Compile Include="classCategoria.cs" />
+    <Compile Include="classCliente.cs" />
     <Compile Include="classConexao.cs" />
     <Compile Include="classFuncionario.cs" />
     <Compile Include="classMarca.cs" />
