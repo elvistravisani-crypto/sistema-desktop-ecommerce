@@ -8,30 +8,28 @@ using System.Data;
 
 namespace capivaras_hardware
 {
-    class classCategoria
+    class classMarca
     {
-        //CONSTRUTOR DA CLASSE
-        public classCategoria()
+        public classMarca()
         {
-            codigo_categoria = 0;
+            codigo_marca = 0;
             nome = null;
+            descricao = null;
             data_cadastro = DateTime.Now;
-            observacao = null;
             status = 1;
 
         }
-        //PROPRIEDADES: LER OU ARMAZENAR OS DADOS QUE SERÃO ENVIADOS OU RETORNADOS DO BD
-        //GET LÊ OS DADOS -- SET GRAVA OS DADOS
-        public int codigo_categoria { get; set; }
+        public int codigo_marca { get; set; }
         public string nome { get; set; }
-        public string observacao { get; set; }
+        public string descricao { get; set; }
         public DateTime data_cadastro { get; set; }
         public int status { get; set; }
 
-        public int CadastrarCategoria()
+
+        public int CadastrarMarca()
         {
             //CRIAR A VARIÁVEL PARA COLOCAR O COMANDO QUE SERÁ USADO
-            string sql = $"INSERT INTO categoria VALUES(0, '{nome}','{observacao}', NOW(),  1 );   ";
+            string sql = $"INSERT INTO categoria VALUES(0, '{nome}','{descricao}', NOW(),  1 );   ";
 
             classConexao cConexao = new classConexao();
 
@@ -43,6 +41,12 @@ namespace capivaras_hardware
 
 
 
+
+
+
+
+
+
+
     }
 }
- 

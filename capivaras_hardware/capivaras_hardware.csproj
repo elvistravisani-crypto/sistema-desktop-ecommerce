@@ -53,6 +53,7 @@
     <Compile Include="classCategoria.cs" />
     <Compile Include="classConexao.cs" />
     <Compile Include="classFuncionario.cs" />
+    <Compile Include="classMarca.cs" />
     <Compile Include="FormCargo.cs">
       <SubType>Form</SubType>
     </Compile>
