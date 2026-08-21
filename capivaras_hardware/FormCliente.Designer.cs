@@ -60,7 +60,7 @@ namespace capivaras_hardware
             this.mtxbDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.label26 = new System.Windows.Forms.Label();
+            this.lbEstado = new System.Windows.Forms.Label();
             this.txbCidade = new System.Windows.Forms.TextBox();
             this.txbBairro = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -302,6 +302,7 @@ namespace capivaras_hardware
             this.txbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbEmail.Location = new System.Drawing.Point(19, 336);
+            this.txbEmail.MaxLength = 50;
             this.txbEmail.Name = "txbEmail";
             this.txbEmail.Size = new System.Drawing.Size(316, 29);
             this.txbEmail.TabIndex = 25;
@@ -341,6 +342,7 @@ namespace capivaras_hardware
             this.txbNome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txbNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNome.Location = new System.Drawing.Point(19, 38);
+            this.txbNome.MaxLength = 50;
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(336, 29);
             this.txbNome.TabIndex = 1;
@@ -436,7 +438,7 @@ namespace capivaras_hardware
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Black;
             this.groupBox2.Controls.Add(this.cmbEstado);
-            this.groupBox2.Controls.Add(this.label26);
+            this.groupBox2.Controls.Add(this.lbEstado);
             this.groupBox2.Controls.Add(this.txbCidade);
             this.groupBox2.Controls.Add(this.txbBairro);
             this.groupBox2.Controls.Add(this.label25);
@@ -468,21 +470,22 @@ namespace capivaras_hardware
             this.cmbEstado.Size = new System.Drawing.Size(121, 28);
             this.cmbEstado.TabIndex = 40;
             // 
-            // label26
+            // lbEstado
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.label26.Location = new System.Drawing.Point(20, 494);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(60, 20);
-            this.label26.TabIndex = 39;
-            this.label26.Text = "Estado";
+            this.lbEstado.AutoSize = true;
+            this.lbEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.lbEstado.Location = new System.Drawing.Point(20, 494);
+            this.lbEstado.Name = "lbEstado";
+            this.lbEstado.Size = new System.Drawing.Size(60, 20);
+            this.lbEstado.TabIndex = 39;
+            this.lbEstado.Text = "Estado";
             // 
             // txbCidade
             // 
             this.txbCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txbCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbCidade.Location = new System.Drawing.Point(20, 442);
+            this.txbCidade.MaxLength = 40;
             this.txbCidade.Name = "txbCidade";
             this.txbCidade.Size = new System.Drawing.Size(336, 29);
             this.txbCidade.TabIndex = 38;
@@ -492,6 +495,7 @@ namespace capivaras_hardware
             this.txbBairro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txbBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbBairro.Location = new System.Drawing.Point(20, 364);
+            this.txbBairro.MaxLength = 30;
             this.txbBairro.Name = "txbBairro";
             this.txbBairro.Size = new System.Drawing.Size(336, 29);
             this.txbBairro.TabIndex = 37;
@@ -541,6 +545,7 @@ namespace capivaras_hardware
             this.txbComplemento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txbComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbComplemento.Location = new System.Drawing.Point(20, 289);
+            this.txbComplemento.MaxLength = 40;
             this.txbComplemento.Name = "txbComplemento";
             this.txbComplemento.Size = new System.Drawing.Size(336, 29);
             this.txbComplemento.TabIndex = 32;
@@ -550,6 +555,7 @@ namespace capivaras_hardware
             this.txbNumero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txbNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbNumero.Location = new System.Drawing.Point(20, 207);
+            this.txbNumero.MaxLength = 8;
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(78, 29);
             this.txbNumero.TabIndex = 31;
@@ -559,6 +565,7 @@ namespace capivaras_hardware
             this.txbRua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.txbRua.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbRua.Location = new System.Drawing.Point(20, 129);
+            this.txbRua.MaxLength = 70;
             this.txbRua.Name = "txbRua";
             this.txbRua.Size = new System.Drawing.Size(336, 29);
             this.txbRua.TabIndex = 30;
@@ -725,6 +732,7 @@ namespace capivaras_hardware
             this.btnCadastrar.TabIndex = 23;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnLimpar
             // 
@@ -795,7 +803,7 @@ namespace capivaras_hardware
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label lbEstado;
         private System.Windows.Forms.TextBox txbCidade;
         private System.Windows.Forms.TextBox txbBairro;
         private System.Windows.Forms.Label label25;

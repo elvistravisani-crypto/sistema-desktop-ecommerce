@@ -17,6 +17,14 @@ namespace capivaras_hardware
             data_nascimento = DateTime.Now;
             telefone = null;
             email = null;
+            endereco = null;
+            numero = 0;
+            complemento = null;
+            bairro = null;
+            cidade = null;
+            estado = null;
+            cep = 0;
+            senha = null;
             sexo = null;
             data_cadastro = DateTime.Now;
             status = 0;
@@ -29,8 +37,15 @@ namespace capivaras_hardware
         public DateTime data_nascimento { get; set; }
         public string telefone { get; set; }
         public string email { get; set; }
+        public string endereco { get; set; }
+        public int numero { get; set; }
+        public string complemento{ get; set; }
+        public string bairro { get; set; }
+        public string cidade{ get; set; }
+        public string estado { get; set; }
+        public int cep { get; set; }
+        public string senha { get; set; }
         public string sexo { get; set; }
-
         public DateTime data_cadastro { get; set; }
         public int status { get; set; }
 
@@ -38,7 +53,7 @@ namespace capivaras_hardware
         {
 
             //CRIAR A VARIÁVEL PARA COLOCAR O COMANDO QUE SERÁ USADO
-            string sql = $"INSERT INTO funcionario VALUES(0, {codigo_cliente}, '{nome}', '{cpf}', '{data_nascimento.ToString("yyyy-MM-dd")}', '{telefone}',  '{email}', '{sexo}','{status}', '{salario.ToString().Replace(",", ".")}', , 1, NOW() );   ";
+            string sql = $"INSERT INTO funcionario VALUES(0, '{nome}', '{cpf}', '{data_nascimento.ToString("yyyy-MM-dd")}', '{telefone}',  '{email}', '{endereco}','{numero}','{complemento}','{bairro}','{cidade}','{estado}', '{cep}', '{senha}','{sexo}', NOW(), 1);   ";
 
             classConexao cConexao = new classConexao();
 

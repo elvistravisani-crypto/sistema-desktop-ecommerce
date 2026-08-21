@@ -40,8 +40,6 @@ namespace capivaras_hardware
 
         }
         
-
-
         public FormFuncionario()
         {
             InitializeComponent();
