@@ -29,7 +29,7 @@ namespace capivaras_hardware
         public int CadastrarMarca()
         {
             //CRIAR A VARIÁVEL PARA COLOCAR O COMANDO QUE SERÁ USADO
-            string sql = $"INSERT INTO categoria VALUES(0, '{nome}','{descricao}', NOW(),  1 );   ";
+            string sql = $"INSERT INTO marca VALUES(0, '{nome}','{descricao}', NOW(),  1 );   ";
 
             classConexao cConexao = new classConexao();
 

@@ -26,7 +26,7 @@ namespace capivaras_hardware
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            //CRIAR OBJETO DA CLASSE FUNCIONÁRIO
+            //CRIAR OBJETO DA CLASSE CATEGORIA  
             classCategoria cCategoria = new classCategoria();
 
             //VALIDAÇÃO SE O COMPO OBRIGATÓRIO FOI PREENCHIDO PELO USUÁRIO
