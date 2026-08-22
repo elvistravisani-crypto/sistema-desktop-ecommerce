@@ -23,7 +23,7 @@ namespace capivaras_hardware
             bairro = null;
             cidade = null;
             estado = null;
-            cep = 0;
+            cep = null;
             senha = null;
             sexo = null;
             data_cadastro = DateTime.Now;
@@ -43,23 +43,20 @@ namespace capivaras_hardware
         public string bairro { get; set; }
         public string cidade{ get; set; }
         public string estado { get; set; }
-        public int cep { get; set; }
+        public string cep { get; set; }
         public string senha { get; set; }
         public string sexo { get; set; }
         public DateTime data_cadastro { get; set; }
         public int status { get; set; }
 
+
+
+        //CRIAR  VARIÁVEL PARA EXECUTAR O COMANDO QUE SERÁ USADO
         public int cadastrarCliente()
         {
-
-            //CRIAR A VARIÁVEL PARA COLOCAR O COMANDO QUE SERÁ USADO
-            string sql = $"INSERT INTO funcionario VALUES(0, '{nome}', '{cpf}', '{data_nascimento.ToString("yyyy-MM-dd")}', '{telefone}',  '{email}', '{endereco}','{numero}','{complemento}','{bairro}','{cidade}','{estado}', '{cep}', '{senha}','{sexo}', NOW(), 1);   ";
-
+            string sql = $"INSERT INTO cliente VALUES(0, '{nome}', '{cpf}', '{data_nascimento.ToString("yyyy-MM-dd")}', '{telefone}', '{endereco}', '{numero}', '{complemento}', '{bairro}', '{cidade}', '{estado}', '{cep}', '{email}', '{senha}', '{sexo}', NOW(), 1);";
             classConexao cConexao = new classConexao();
-
             return cConexao.ExecutaQuery(sql);
-
-
         }
 
 

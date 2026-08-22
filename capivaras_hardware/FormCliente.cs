@@ -79,7 +79,7 @@ namespace capivaras_hardware
             classCliente cCliente = new classCliente();
 
             //VALIDAÇÃO SE TODOS OS COMPOS OBRIGATÓRIOS DO FORMULÁRIO ESTÃO PREENCHIDOS 
-            if (string.IsNullOrWhiteSpace(txbNome.Text) || mtxbCpf.Text == "   .   .   -  " || mtxbDataNascimento.Text == "  /  /    " || mtxbCelular.Text == "(  )     -    " || string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbSenha.Text) || mtxbCep.Text == "     -   " || string.IsNullOrWhiteSpace(txbRua.Text) || string.IsNullOrWhiteSpace(txbNumero.Text) || string.IsNullOrWhiteSpace(txbComplemento.Text) || string.IsNullOrWhiteSpace(txbBairro.Text) || string.IsNullOrWhiteSpace(txbCidade.Text) )
+            if (string.IsNullOrWhiteSpace(txbNome.Text) || mtxbCpf.Text == "   .   .   -  " || mtxbDataNascimento.Text == "  /  /    " || mtxbCelular.Text == "(  )     -    " || string.IsNullOrWhiteSpace(txbEmail.Text) || string.IsNullOrWhiteSpace(txbSenha.Text) || mtxbCep.Text == "     -   " || string.IsNullOrWhiteSpace(txbRua.Text) || string.IsNullOrWhiteSpace(txbNumero.Text) || string.IsNullOrWhiteSpace(txbBairro.Text) || string.IsNullOrWhiteSpace(txbCidade.Text) )
             
                 {
                     MessageBox.Show("Favor verificar se todos os campos obrigatórios estão preenchidos", "Atenção", MessageBoxButtons.OK,MessageBoxIcon.Warning);
@@ -102,10 +102,69 @@ namespace capivaras_hardware
             {
                 cCliente.nome = txbNome.Text;
                 cCliente.data_nascimento = Convert.ToDateTime(mtxbDataNascimento.Text);
+                //IF PARA VERIFICAR QUAL RADIOBUTON ESTA SELECIONADA PELO USUÁRIO
+                if (rdbSxFeminino.Checked)
+                {
+                    cCliente.sexo = "F";
+                }
+                else if (rdbSxMasculino.Checked)
+                {
+                    cCliente.sexo = "M";
+                }
+                else
+                {
+                    cCliente.sexo = "N";
+                }
+                //SALVANDO O CPF NO BANCO 
+                cCliente.cpf = mtxbCpf.Text;
+
+                //SALVANDO O NUMERO DE CELULAR, CAMPO NÃO OBRIGATÓRIO
+                if (mtxbCelular.Text == "(  )     -    ")
+                {
+                    cCliente.telefone = "";
+                }
+                else
+                {
+                    cCliente.telefone = mtxbCelular.Text;
+                }
+
+                //CAPTURA DAS CREDENCIAIS: EMAIL E SENHA
+
+                // A NOTAÇÕS //
+
+                //para produção em um ambiente real, tratar de gerar a hash da senha para armazenar no BD
+                //A senha será transportada em texto claro para o servidor, estará protegida pela protocolo HTTPS, oque garante o transporte pelo túnel criptografado, será despejada no BD apenas a hash DELA.
+                cCliente.email = txbEmail.Text;
+                cCliente.senha = txbSenha.Text;
+
+                //SALVANDO O ENDEREÇO
+                cCliente.endereco = txbRua.Text;
+                cCliente.numero = Convert.ToInt32(txbNumero.Text);
+                cCliente.complemento = txbComplemento.Text;
+                cCliente.bairro = txbBairro.Text;
+                cCliente.cidade = txbCidade.Text;
+                cCliente.cep = mtxbCep.Text;
+
+                //ESTADO - COMBOBOX, MANDAR PARA O BD O ITEM SELECIONADO PELO USUÁRIO
+                cCliente.estado = cmbEstado.SelectedItem.ToString();
+
+                //CHAMAR O MÉTODO DE CADASTRO DA CLASSE FUNCIONÁRIO
+                int resp = cCliente.cadastrarCliente();
+
+                //MOSTRAR O RESULTADO DO MÉTODO PARA O USUÁRIO
+                //SE DEU CERTO - CADASTRO REALIZADO 1
+                if (resp == 1)
+                {
+                    MessageBox.Show($"Cliente: {cCliente.nome} cadastrado com sucesso", "Sistema Loja Hardware", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Limpar();
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao realizar o cadastro", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
-
-
+           
 
 
 

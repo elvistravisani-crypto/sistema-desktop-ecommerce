@@ -85,6 +85,7 @@ namespace capivaras_hardware
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.rdbSxNaoInformado = new System.Windows.Forms.RadioButton();
             this.gbFuncDadosPessoais.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -108,6 +109,7 @@ namespace capivaras_hardware
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.panel2.Controls.Add(this.rdbSxNaoInformado);
             this.panel2.Controls.Add(this.label29);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label14);
@@ -746,6 +748,18 @@ namespace capivaras_hardware
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
             // 
+            // rdbSxNaoInformado
+            // 
+            this.rdbSxNaoInformado.AutoSize = true;
+            this.rdbSxNaoInformado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.rdbSxNaoInformado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbSxNaoInformado.Location = new System.Drawing.Point(273, 495);
+            this.rdbSxNaoInformado.Name = "rdbSxNaoInformado";
+            this.rdbSxNaoInformado.Size = new System.Drawing.Size(125, 22);
+            this.rdbSxNaoInformado.TabIndex = 56;
+            this.rdbSxNaoInformado.Text = "Não Informado";
+            this.rdbSxNaoInformado.UseVisualStyleBackColor = false;
+            // 
             // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -834,5 +848,6 @@ namespace capivaras_hardware
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.RadioButton rdbSxNaoInformado;
     }
 }

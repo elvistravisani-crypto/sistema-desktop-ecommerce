@@ -889,6 +889,7 @@ namespace capivaras_hardware
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(78, 29);
             this.txbNumero.TabIndex = 31;
+            this.txbNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSalario_KeyPress);
             // 
             // txbRua
             // 
