@@ -146,5 +146,24 @@ namespace capivaras_hardware
 
             }
         }
+
+
+        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<formConsFuncionario>().Count() > 0)
+            {
+                MessageBox.Show("O formulário de cadastro de Produto já está aberto", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                formConsFuncionario Forfilho = new formConsFuncionario();
+                Forfilho.MdiParent = this;
+                Forfilho.Show();
+            }
+        }
+
+
+
+
     }
 }

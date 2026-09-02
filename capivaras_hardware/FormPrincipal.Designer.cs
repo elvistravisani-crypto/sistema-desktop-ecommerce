@@ -47,6 +47,7 @@ namespace capivaras_hardware
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statuslbData = new System.Windows.Forms.ToolStripStatusLabel();
             this.statuslbHora = new System.Windows.Forms.ToolStripStatusLabel();
+            this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +140,8 @@ namespace capivaras_hardware
             // 
             // mnPriCon
             // 
+            this.mnPriCon.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.funcionarioToolStripMenuItem});
             this.mnPriCon.ForeColor = System.Drawing.Color.White;
             this.mnPriCon.Image = ((System.Drawing.Image)(resources.GetObject("mnPriCon.Image")));
             this.mnPriCon.Name = "mnPriCon";
@@ -201,6 +204,13 @@ namespace capivaras_hardware
             this.statuslbHora.Size = new System.Drawing.Size(42, 20);
             this.statuslbHora.Text = "Hora";
             // 
+            // funcionarioToolStripMenuItem
+            // 
+            this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.funcionarioToolStripMenuItem.Text = "Funcionario";
+            this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -242,6 +252,7 @@ namespace capivaras_hardware
         private System.Windows.Forms.ToolStripStatusLabel statuslbHora;
         private System.Windows.Forms.ToolStripMenuItem mnBtnCadCat;
         private System.Windows.Forms.ToolStripMenuItem mnBtnCadMar;
+        private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
     }
 }
 

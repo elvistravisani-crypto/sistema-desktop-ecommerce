@@ -188,6 +188,14 @@ namespace capivaras_hardware
             classConexao cConexao = new classConexao();
             return cConexao.ExecutaQuery(sql);
         }
+        //MÉTODO PARA CARREGAR AS CIDADES CADASTRADAS DA TABELA DE FUNCIONÁRIO NO FORM DE CONSULTA
+        public DataTable CarregarComboCidade()
+        {
+            string sql = $"SELECT DISTINCT cidade FROM funcionario WHERE status = 1 ORDER BY cidade;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+        }
 
 
 
