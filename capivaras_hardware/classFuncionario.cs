@@ -89,6 +89,51 @@ namespace capivaras_hardware
 
 
         }
+
+        /*CONSULTA DE FUNCIONÁRIO*/
+        /* FILTROS: NOME(INÍCIO E CONTÉM), SEXO, CIDADE, CARGO, CPF, DATA ADMISSÃO E STATUS */
+        /* CAMPOS EXIBIDOS NA CONSULTA: CODIGO, NOME, CPF, NASCIMENTO, CARGO, SEXO, CIDADE E CELULAR */
+
+        //CONSUTA DE FUNCIONÁRIO POR NOME (INÍCIO)
+        public DataTable ConsFuncNomeInicio(string nomei)
+        {
+            string sql = $"SELECT funcionario.codigo_funcionario 'ID', funcionario.nome 'Nome', funcionario.cpf 'CPF', funcionario.data_nascimento 'Nascimento', cargo.nome 'Cargo', funcionario.sexo 'Sexo', funcionario.cidade 'Cidade', funcionario.telefone_celular 'Celular' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = 1 AND funcionario.nome LIKE '{nomei}%' ORDER BY funcionario.nome;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+
+        }
+
+        //CONSUTA DE FUNCIONÁRIO POR NOME (CONTÉM)
+        public DataTable ConsFuncNomeContm(string nomec)
+        {
+            string sql = $"SELECT funcionario.codigo_funcionario 'ID', funcionario.nome 'Nome', funcionario.cpf 'CPF', funcionario.data_nascimento 'Nascimento', cargo.nome 'Cargo', funcionario.sexo 'Sexo', funcionario.cidade 'Cidade', funcionario.telefone_celular 'Celular' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = 1 AND funcionario.nome LIKE '%{nomec}%' ORDER BY funcionario.nome;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+
+        }
+
+        //CONSUTA DE FUNCIONÁRIO POR SEXO   
+        public DataTable ConsFuncSexo(string sexo)
+        {
+            string sql = $"SELECT funcionario.codigo_funcionario 'ID', funcionario.nome 'Nome', funcionario.cpf 'CPF', funcionario.data_nascimento 'Nascimento', cargo.nome 'Cargo', funcionario.sexo 'Sexo', funcionario.cidade 'Cidade', funcionario.telefone_celular 'Celular' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = 1 AND funcionario.sexo = '{sexo}' ORDER BY funcionario.nome;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+
+        }
+
+        //CONSUTA DE FUNCIONÁRIO POR CIDADE  
+        public DataTable ConsFuncCidade(string cidade)
+        {
+            string sql = $"SELECT funcionario.codigo_funcionario 'ID', funcionario.nome 'Nome', funcionario.cpf 'CPF', funcionario.data_nascimento 'Nascimento', cargo.nome 'Cargo', funcionario.sexo 'Sexo', funcionario.cidade 'Cidade', funcionario.telefone_celular 'Celular' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = 1 AND funcionario.cidade = '{cidade}' ORDER BY funcionario.nome;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+
+        }
+
         //CONSULTA DE FUNCIONÁRIO POR CARGO
         public DataTable ConsFuncCargo(int cargo)
         {
@@ -98,7 +143,7 @@ namespace capivaras_hardware
             return cConexao.RetornaDados(sql);
         }
 
-        //CONSULTA DE FUNCIONÁRIO POR CARGO
+        //CONSULTA DE FUNCIONÁRIO POR CPF
         public DataTable ConsFunCpf(string cpf)
         {
             string sql = $"SELECT funcionario.codigo_funcionario 'ID', funcionario.nome 'Nome', funcionario.cpf 'CPF', funcionario.data_nascimento 'Nascimento', cargo.nome 'Cargo', funcionario.sexo 'Sexo', funcionario.cidade 'Cidade', funcionario.telefone_celular 'Celular' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = 1 AND funcionario.cpf = '{cpf}' ORDER BY funcionario.nome;";
@@ -106,6 +151,7 @@ namespace capivaras_hardware
             classConexao cConexao = new classConexao();
             return cConexao.RetornaDados(sql);
         }
+
         //CONSULTA DE FUNCIONÁRIO POR  DATA DE ADMISSÃO(CADASTRO)
         public DataTable ConsFuncDataAdmissao(DateTime datai, DateTime dataf)
         {
@@ -114,6 +160,7 @@ namespace capivaras_hardware
             classConexao cConexao = new classConexao();
             return cConexao.RetornaDados(sql);
         }
+
         //CONSULTA DE FUNCIONÁRIO POR STATUS
         public DataTable ConsFunStatus(int status)
         {
@@ -122,6 +169,7 @@ namespace capivaras_hardware
             classConexao cConexao = new classConexao();
             return cConexao.RetornaDados(sql);
         }
+
         //MÉTODO PARA BUSCAR TODOS OS DADOS DO FUNCIONÁRIO SELECIONADO PELO USUÁRIO NO FORM DE CONSULTA
         public bool DadosFuncionario(int codigo)
         {
@@ -170,6 +218,7 @@ namespace capivaras_hardware
                 return false;
             }
         }
+
         //MÉTODO PARA ATUALIZAR FUNCIONÁRIO
         public int AtualizarFuncionario()
         {
@@ -188,6 +237,7 @@ namespace capivaras_hardware
             classConexao cConexao = new classConexao();
             return cConexao.ExecutaQuery(sql);
         }
+
         //MÉTODO PARA CARREGAR AS CIDADES CADASTRADAS DA TABELA DE FUNCIONÁRIO NO FORM DE CONSULTA
         public DataTable CarregarComboCidade()
         {

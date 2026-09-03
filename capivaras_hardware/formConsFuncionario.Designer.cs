@@ -30,7 +30,7 @@ namespace capivaras_hardware
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formConsFuncionario));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTituloFuncionario = new System.Windows.Forms.Panel();
             this.btSair = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
@@ -296,6 +296,7 @@ namespace capivaras_hardware
             this.btPesquisar.Text = "     Pesquisar";
             this.btPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btPesquisar.UseVisualStyleBackColor = true;
+            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
             // gbNome
             // 
@@ -313,22 +314,22 @@ namespace capivaras_hardware
             // rbContem
             // 
             this.rbContem.AutoSize = true;
+            this.rbContem.Checked = true;
             this.rbContem.Location = new System.Drawing.Point(71, 28);
             this.rbContem.Name = "rbContem";
             this.rbContem.Size = new System.Drawing.Size(77, 23);
             this.rbContem.TabIndex = 2;
+            this.rbContem.TabStop = true;
             this.rbContem.Text = "Contém";
             this.rbContem.UseVisualStyleBackColor = true;
             // 
             // rbInicio
             // 
             this.rbInicio.AutoSize = true;
-            this.rbInicio.Checked = true;
             this.rbInicio.Location = new System.Drawing.Point(6, 28);
             this.rbInicio.Name = "rbInicio";
             this.rbInicio.Size = new System.Drawing.Size(62, 23);
             this.rbInicio.TabIndex = 1;
-            this.rbInicio.TabStop = true;
             this.rbInicio.Text = "Início";
             this.rbInicio.UseVisualStyleBackColor = true;
             // 
@@ -391,14 +392,14 @@ namespace capivaras_hardware
             this.dgvFuncionario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFuncionario.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFuncionario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFuncionario.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgvFuncionario.Location = new System.Drawing.Point(12, 201);
             this.dgvFuncionario.MultiSelect = false;

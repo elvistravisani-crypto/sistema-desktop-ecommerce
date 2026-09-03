@@ -122,6 +122,128 @@ namespace capivaras_hardware
                     break;
             }
         }
-        
+
+        private void btPesquisar_Click(object sender, EventArgs e)
+        {
+            //CRIANDO UM OBJETO DA CLASSE FUNCIONÁRIO PARA USAR OS MÉTODOS DE CONSULTA E PROPRIEDADES
+            classFuncionario cFuncionario = new classFuncionario();
+
+            //CRIAR VARIÁVEL QUE VAI ALIMENTAR O SWITCH
+            int filtro = cbFiltro.SelectedIndex;
+            
+         
+            switch(filtro) //USUÁRIO ESCOLHO OPÇÃO E SISTEMA LÊ A POSIÇÃO DO ITEM NA LISTA (SELECTDINDEX)
+            {
+                //CARGO
+                case 1:
+                    dgvFuncionario.DataSource = cFuncionario.ConsFuncCargo(Convert.ToInt32(cbCargo.SelectedValue));
+
+                    break;
+
+                //CIDADE
+                case 2:
+                    dgvFuncionario.DataSource = cFuncionario.ConsFuncCidade(cbCidade.SelectedValue.ToString());
+                    break;
+
+                //CPF
+                case 3:
+                    //VALIDAR SE USUÁRIO INFORMOU UM CPF
+                    if(mskCpf.Text != "   .   .   -")
+                    {
+                        dgvFuncionario.DataSource = cFuncionario.ConsFunCpf(mskCpf.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Favor inserir um CPF completo", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        mskCpf.Focus();
+                    }
+
+                    break;
+
+                //SEXO
+                case 4:
+                    //FEMININO
+                    if(cbSexo.SelectedIndex == 0)
+                    {
+                        dgvFuncionario.DataSource = cFuncionario.ConsFuncSexo("F");
+                    }
+                    else if(cbSexo.SelectedIndex == 1) //MASCULINO
+                    {
+                        dgvFuncionario.DataSource = cFuncionario.ConsFuncSexo("M");
+                    }
+                    else //NÃO INFORMADO
+                    {
+                        dgvFuncionario.DataSource = cFuncionario.ConsFuncSexo("N");
+                    }
+                    break;
+                //DATA ADMISSÃO
+                //VOLTAR PARA VALIDAR DATA INICIAL E DATA FINAL
+                case 5:
+                    dgvFuncionario.DataSource = cFuncionario.ConsFuncDataAdmissao(dtpDataInicial.Value, dtpDataFinal.Value);
+                    break;
+
+                //STATUS
+                case 6:
+                    //ATIVO
+                    if(rbAtivo.Checked)
+                    {
+                        dgvFuncionario.DataSource = cFuncionario.ConsFunStatus(1);
+                    }
+                    else //INATIVO
+                    {
+                        dgvFuncionario.DataSource = cFuncionario.ConsFunStatus(0);
+                    }
+
+
+                    break;
+                //NOME
+                //VALIDAR SE USUÁRIO PREENCHEU O NOME
+                    default:
+                    if (string.IsNullOrWhiteSpace(txtNome.Text))
+                    {
+                        MessageBox.Show("Favor informar um nome", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else 
+                    {
+                        //USUÁRIO ESCOLHEU A OPÇÃO CONTÉM
+                        if(rbContem.Checked)
+                        {
+                            dgvFuncionario.DataSource = cFuncionario.ConsFuncNomeContm(txtNome.Text);
+                        }
+                        else //OPÇÃO INICIO
+                        {
+                            dgvFuncionario.DataSource = cFuncionario.ConsFuncNomeInicio(txtNome.Text);
+                        }
+
+                    }
+                    break;
+
+
+
+
+
+
+
+
+
+
+
+
+            }//FIM DO SWITCH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
     }
 }

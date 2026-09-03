@@ -45,6 +45,15 @@ namespace capivaras_hardware
             InitializeComponent();
 
         }
+        //CRIAR VARIÁVEIS QEUE SERÃO UTILIZADAS NO FORM DE CONSULTA 
+        //TIPO - MANEIRA QUE FORM SER´[A ABERTO 
+        //OUTRAS VARIÁVEIS - EXIBIR OS DADOS QU ESTÃO ARMAZENADO NO BD E NÃO OS DECLARADOS NO LOAD DO FORM, TUDO QUE FOR COMBOBOX PRECISA TER UMA VARIÁVEL E DATA CADASTRO
+        public string tipo, estado_civil, estado;
+        public int cargo, tipo_acesso;
+        public DateTime data_cadastro;
+
+
+
 
         private void FormFuncionario_Load(object sender, EventArgs e)
         {
