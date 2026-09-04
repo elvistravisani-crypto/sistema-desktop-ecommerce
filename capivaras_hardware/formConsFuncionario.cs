@@ -224,15 +224,85 @@ namespace capivaras_hardware
 
 
 
-
-
-
-
-
             }//FIM DO SWITCH
 
 
 
+        }
+
+        private void dgvFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (MessageBox.Show("Deseja alterar ou exluir o funcionário selecionado?","Atenção!" , MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //INSTANCIAR A CLASSE FUNCIONÁRIO
+                classFuncionario cFuncionario = new classFuncionario();
+
+                //INSTANCIAR O FORMULÁRIO DE CADASTRO DE FUNCIONÁRIO - PARA MANDAR AS INFORMAÇÕES DO BANCO PARA O FORM
+                FormFuncionario fFuncionario = new FormFuncionario();
+
+                //PEGAR O FUNCIONÁRIO ESCOLHIDO PELO USUÁRIO ATRAVÉS DA SELEÇÃO NA GRID
+                cFuncionario.DadosFuncionario(Convert.ToInt32(dgvFuncionario.SelectedRows[0].Cells[0].Value));
+
+                //passar os dados do bd para os elementos do form de cadastro
+                fFuncionario.codigo_funcionario.Text = cFuncionario.codigo_funcionario.ToString();
+                fFuncionario.txbNome.Text = cFuncionario.nome.ToString();
+                fFuncionario.txbNomeSocial.Text = cFuncionario.nome_social.ToString();
+                fFuncionario.mtxbDataNascimento.Text = cFuncionario.data_nascimento.ToString();
+                //SEXO - FAZER IF PARA LER O QUE ESTÁ ARMAZENADO NO BD E DEIXAR O RADIO BUTTON SELECIONADO
+                if (cFuncionario.sexo == "F")
+                {
+                    fFuncionario.rdbSxFeminino.Checked = true;
+                }
+                else if (cFuncionario.sexo == "N")
+                {
+                    fFuncionario.rdbSxMasculino = true;
+                }
+                else
+                {
+                    fFuncionario.rdbSxNaoInformado.Checked = true;
+                }
+                //ESTADO CIVIL - 
+
+                fFuncionario.mtxbCpf.Text = cFuncionario.cpf.ToString();
+                fFuncionario.mtxbRg.Text = cFuncionario.rg.ToString();
+                fFuncionario.txbSalario.Text = cFuncionario.salario.ToString();
+                fFuncionario.txbRua.Text = cFuncionario.endereco.ToString();
+                fFuncionario.txbNumero.Text = cFuncionario.numero.ToString();
+                fFuncionario.txbComplemento.Text = cFuncionario.complemento.ToString();
+                fFuncionario.txbBairro.Text = cFuncionario.bairro.ToString();
+                fFuncionario.txbCidade.Text = cFuncionario.cidade.ToString();
+                fFuncionario.cmbEstado.Text = cFuncionario.estado.ToString();
+                fFuncionario.mtxbCep.Text = cFuncionario.cep.ToString();
+                fFuncionario.mtxbTelefoneFixo.Text = cFuncionario.telefone_residencial.ToString();
+                fFuncionario.mtxbTelefoneCelular.Text = cFuncionario.telefone_celular.ToString();
+                fFuncionario.txbEmail.Text = cFuncionario.email.ToString();
+                fFuncionario.txbUsuario.Text = cFuncionario.usuario.ToString();
+                fFuncionario.txbSenha.Text = cFuncionario.senha.ToString();
+                fFuncionario.tipo_acesso = cFuncionario.tipo_acesso;
+
+                //STATUS 
+                if (cFuncionario.status == 1)
+                {
+                    fFuncionario.rdbStatusAtivo.Checked = true;
+                }
+                else
+                {
+                    fFuncionario.rdbStatusInativo.Checked = true;
+                }
+
+                //DATA CADASTRO MANDAR PARA A VARIÁVEL O VALOR ARMAZENADO NO BD
+                fFuncionario.data_cadastro = cFuncionario.data_cadastro;
+                //CÓDIGO CARGO - COMBO - MANDAR PARA A VARIÁVEL O VALOR ARMAZENADO NO BD
+                fFuncionario.cargo = cFuncionario.codigo_cargo;
+
+                //PASSAR A VARIÁVEL TIPO DECLARADA NO FORM DE CADASTRO COMO ELE SERÁ ABERTO - ATUALIZAÇÃO 
+                fFuncionario.tipo = "Atualização";
+
+                //CHAMAR O FORM DE CADASTRO COM OS DADOS CARREGADOR DO BD - MODO EXCLUSIVO: SHOWDIALOG
+                fFuncionario.ShowDialog();
+
+                //ATUALIZAR A GRID DE CONSULTA
+                btPesquisar_Click(this, new EventArgs());
 
 
 
@@ -240,10 +310,17 @@ namespace capivaras_hardware
 
 
 
-
-
-
+            }
 
         }
+
+
+
+
+
+
+
+
+
     }
 }

@@ -124,7 +124,69 @@ namespace capivaras_hardware
             //NÃO DEIXAR NENHUM CARGO SELECIONADO
             cmbCargo.SelectedIndex = -1;
 
+
+            //VERIFICAÇÃO DO MODO DE ABERTURA - CASO FOR ATUALIZAÇÃO .
+            if (tipo == "Atualização")
+            {
+
+
+
+                //COMBO BOX (VARIÁVEIS CRIADAS PARA ATUALIZAÇÃO)
+                //RECEBER O QUE ESTÁ ARMAZENADA NO BD E NÃO O PADRÃO QUE FOI DEFINIDO NA HORA DE CADASTRAR 
+                lbDataCadastro.Text = data_cadastro.ToString();
+                cmbEstado.SelectedItem = estado;
+                cmbEstadoCivil.SelectedItem = estado_civil;
+                cmbCargo.SelectedValue = cargo;
+
+                //VERIFICAR O MODO DE ABERTURA DO FORM - SE FOR ATUALIZAÇÃO
+                if (tipo == "Atualização")
+                {
+                    
+                    lbTitulo.Text = "Atualização de funcionário";
+
+                    //VERIFICAÇÃO RADIOBUTON DE STATUS
+                    if (status)
+                    {
+
+                    }
+                    else
+                    {
+
+                    }
+
+                    btnCadastrar.Enabled = false;
+                    //COMBO BOX (VARIÁVEIS CRIADAS PARA ATUALIZAÇÃO)
+                    //RECEBER O QUE ESTÁ ARMAZENADA NO BD E NÃO O PADRÃO QUE FOI DEFINIDO NAHORA DE CADASTRAR
+                    lbDataCadastro.Text = data_cadastro.ToString();
+                    cmbEstado.SelectedItem = estado;
+                    cmbEstadoCivil.SelectedItem = estado_civil;
+                    cmbCargo.SelectedValue = cargo;
+
+
+
+                    //TIPO ACESSO 0 COMUM - 1 ADMINISTRADOR
+                    if (tipo_acesso == 0)
+                {
+                    rdbTipoAcessoComum.Checked = true;
+                    rdbTipoAcessoAdministrador.Checked = false;
+                }
+                else
+                {
+                    rdbTipoAcessoAdministrador.Checked = true;
+                    rdbTipoAcessoComum.Checked = false;
+                }
+            }
+            else
+            {
+                btnAtualizar.Enabled = false;
+                btnExcluir.Enabled = false;
+            }
+
+
+
+
         }
+
         //MÉTODO PARA PINTAR OS CAMPOS OBRIGATÓRIOS NO FORM
         private void CamposObrigatorios()
         {

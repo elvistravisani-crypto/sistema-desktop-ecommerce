@@ -110,6 +110,7 @@ namespace capivaras_hardware
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.codigo_funcionario = new System.Windows.Forms.Label();
             this.gbFuncDadosPessoais.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
@@ -673,7 +674,6 @@ namespace capivaras_hardware
             this.txbSalario.Name = "txbSalario";
             this.txbSalario.Size = new System.Drawing.Size(100, 26);
             this.txbSalario.TabIndex = 29;
-            this.txbSalario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSalario_KeyPress);
             // 
             // cmbCargo
             // 
@@ -889,7 +889,6 @@ namespace capivaras_hardware
             this.txbNumero.Name = "txbNumero";
             this.txbNumero.Size = new System.Drawing.Size(78, 29);
             this.txbNumero.TabIndex = 31;
-            this.txbNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbSalario_KeyPress);
             // 
             // txbRua
             // 
@@ -1049,7 +1048,6 @@ namespace capivaras_hardware
             this.btnCadastrar.TabIndex = 23;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnLimpar
             // 
@@ -1062,7 +1060,18 @@ namespace capivaras_hardware
             this.btnLimpar.TabIndex = 22;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
-            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // codigo_funcionario
+            // 
+            this.codigo_funcionario.AutoSize = true;
+            this.codigo_funcionario.BackColor = System.Drawing.Color.Black;
+            this.codigo_funcionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.codigo_funcionario.ForeColor = System.Drawing.Color.Black;
+            this.codigo_funcionario.Location = new System.Drawing.Point(701, 720);
+            this.codigo_funcionario.Name = "codigo_funcionario";
+            this.codigo_funcionario.Size = new System.Drawing.Size(46, 13);
+            this.codigo_funcionario.TabIndex = 37;
+            this.codigo_funcionario.Text = "Cidade";
             // 
             // FormFuncionario
             // 
@@ -1071,6 +1080,7 @@ namespace capivaras_hardware
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1407, 848);
+            this.Controls.Add(this.codigo_funcionario);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnCadastrar);
@@ -1104,66 +1114,36 @@ namespace capivaras_hardware
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox gbFuncDadosPessoais;
         private System.Windows.Forms.Label lbSexo;
         private System.Windows.Forms.Button btnSelecionarImagem;
-        private System.Windows.Forms.PictureBox pbxFoto;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox mtxbDataNascimento;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbNomeSocial;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txbNome;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton rdbSxFeminino;
-        private System.Windows.Forms.RadioButton rdbSxMasculino;
-        private System.Windows.Forms.ComboBox cmbEstadoCivil;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox mtxbRg;
-        private System.Windows.Forms.MaskedTextBox mtxbCpf;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txbEmail;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MaskedTextBox mtxbTelefoneCelular;
-        private System.Windows.Forms.MaskedTextBox mtxbTelefoneFixo;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton rdbStatusInativo;
-        private System.Windows.Forms.RadioButton rdbStatusAtivo;
         private System.Windows.Forms.Label lbTipoAcesso;
-        private System.Windows.Forms.RadioButton rdbTipoAcessoAdministrador;
-        private System.Windows.Forms.RadioButton rdbTipoAcessoComum;
-        private System.Windows.Forms.TextBox txbSenha;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txbUsuario;
-        private System.Windows.Forms.TextBox txbSalario;
-        private System.Windows.Forms.ComboBox cmbCargo;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lbCargo;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.Label lbEstado;
-        private System.Windows.Forms.TextBox txbCidade;
-        private System.Windows.Forms.TextBox txbBairro;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txbComplemento;
-        private System.Windows.Forms.TextBox txbNumero;
-        private System.Windows.Forms.TextBox txbRua;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.MaskedTextBox mtxbCep;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbDataCadastro;
@@ -1184,6 +1164,36 @@ namespace capivaras_hardware
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Button btnLimpar;
-        private System.Windows.Forms.RadioButton rdbSxNaoInformado;
+        public System.Windows.Forms.GroupBox gbFuncDadosPessoais;
+        public System.Windows.Forms.PictureBox pbxFoto;
+        public System.Windows.Forms.MaskedTextBox mtxbDataNascimento;
+        public System.Windows.Forms.TextBox txbNomeSocial;
+        public System.Windows.Forms.TextBox txbNome;
+        public System.Windows.Forms.RadioButton rdbSxFeminino;
+        public System.Windows.Forms.RadioButton rdbSxMasculino;
+        public System.Windows.Forms.ComboBox cmbEstadoCivil;
+        public System.Windows.Forms.MaskedTextBox mtxbRg;
+        public System.Windows.Forms.MaskedTextBox mtxbCpf;
+        public System.Windows.Forms.TextBox txbEmail;
+        public System.Windows.Forms.MaskedTextBox mtxbTelefoneCelular;
+        public System.Windows.Forms.MaskedTextBox mtxbTelefoneFixo;
+        public System.Windows.Forms.Label label19;
+        public System.Windows.Forms.RadioButton rdbStatusInativo;
+        public System.Windows.Forms.RadioButton rdbStatusAtivo;
+        public System.Windows.Forms.RadioButton rdbTipoAcessoAdministrador;
+        public System.Windows.Forms.RadioButton rdbTipoAcessoComum;
+        public System.Windows.Forms.TextBox txbSenha;
+        public System.Windows.Forms.TextBox txbUsuario;
+        public System.Windows.Forms.TextBox txbSalario;
+        public System.Windows.Forms.ComboBox cmbCargo;
+        public System.Windows.Forms.ComboBox cmbEstado;
+        public System.Windows.Forms.TextBox txbCidade;
+        public System.Windows.Forms.TextBox txbBairro;
+        public System.Windows.Forms.TextBox txbComplemento;
+        public System.Windows.Forms.TextBox txbNumero;
+        public System.Windows.Forms.TextBox txbRua;
+        public System.Windows.Forms.MaskedTextBox mtxbCep;
+        public System.Windows.Forms.RadioButton rdbSxNaoInformado;
+        public System.Windows.Forms.Label codigo_funcionario;
     }
 }
