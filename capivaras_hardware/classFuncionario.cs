@@ -202,14 +202,14 @@ namespace capivaras_hardware
                 estado = Convert.ToString(dt.Rows[0]["estado"]);
                 cep = Convert.ToString(dt.Rows[0]["cep"]);
                 telefone_residencial = Convert.ToString(dt.Rows[0]["telefone_residencial"]);
-                telefone_celular = Convert.ToString(dt.Rows[0][" telefone_celular"]);
+                telefone_celular = Convert.ToString(dt.Rows[0]["telefone_celular"]);
                 email = Convert.ToString(dt.Rows[0]["email"]);
                 usuario = Convert.ToString(dt.Rows[0]["usuario"]);
                 senha = Convert.ToString(dt.Rows[0]["senha"]);
                 tipo_acesso = Convert.ToInt32(dt.Rows[0]["tipo_acesso"]);
                 status = Convert.ToInt32(dt.Rows[0]["status"]);
                 data_cadastro = Convert.ToDateTime(dt.Rows[0]["data_cadastro"]);
-                codigo_cargo = Convert.ToInt32(dt.Rows[0]["status"]);
+                codigo_cargo = Convert.ToInt32(dt.Rows[0]["codigo_cargo"]);
                 return true;
 
             }

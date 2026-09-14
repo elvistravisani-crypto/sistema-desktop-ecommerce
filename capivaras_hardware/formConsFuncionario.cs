@@ -253,16 +253,16 @@ namespace capivaras_hardware
                 {
                     fFuncionario.rdbSxFeminino.Checked = true;
                 }
-                else if (cFuncionario.sexo == "N")
+                else if (cFuncionario.sexo == "M") // Verifique se no seu banco 'M' é Masculino
                 {
-                    fFuncionario.rdbSxMasculino = true;
+                    fFuncionario.rdbSxMasculino.Checked = true;
                 }
-                else
+                else // "N" ou Não informado
                 {
                     fFuncionario.rdbSxNaoInformado.Checked = true;
                 }
                 //ESTADO CIVIL - 
-
+                fFuncionario.estado_civil = cFuncionario.estado_civil;
                 fFuncionario.mtxbCpf.Text = cFuncionario.cpf.ToString();
                 fFuncionario.mtxbRg.Text = cFuncionario.rg.ToString();
                 fFuncionario.txbSalario.Text = cFuncionario.salario.ToString();
@@ -271,7 +271,7 @@ namespace capivaras_hardware
                 fFuncionario.txbComplemento.Text = cFuncionario.complemento.ToString();
                 fFuncionario.txbBairro.Text = cFuncionario.bairro.ToString();
                 fFuncionario.txbCidade.Text = cFuncionario.cidade.ToString();
-                fFuncionario.cmbEstado.Text = cFuncionario.estado.ToString();
+                fFuncionario.estado = cFuncionario.estado.ToString();
                 fFuncionario.mtxbCep.Text = cFuncionario.cep.ToString();
                 fFuncionario.mtxbTelefoneFixo.Text = cFuncionario.telefone_residencial.ToString();
                 fFuncionario.mtxbTelefoneCelular.Text = cFuncionario.telefone_celular.ToString();
