@@ -171,7 +171,14 @@ namespace capivaras_hardware
                 cFuncionario.nome = txbNome.Text;
                 cFuncionario.nome_social = txbNomeSocial.Text;
                 cFuncionario.foto = "";
-                cFuncionario.data_nascimento = Convert.ToDateTime(mtxbDataNascimento.Text);
+                if (!DateTime.TryParseExact(mtxbDataNascimento.Text, "dd/MM/yyyy",
+     System.Globalization.CultureInfo.InvariantCulture,
+     System.Globalization.DateTimeStyles.None, out DateTime dataNasc))
+                {
+                    MessageBox.Show("Data de nascimento inválida", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                cFuncionario.data_nascimento = dataNasc;
 
                 if (rdbSxFeminino.Checked)
                 {
@@ -257,9 +264,6 @@ namespace capivaras_hardware
                 //LER O CODIGO DO FUNCIONÁRIO E MANDAR PARA A APROPRIEDADE DA CLASSE
                 cFuncionario.codigo_funcionario = Convert.ToInt32(codigo_funcionario.Text);
 
-                //LER O CODIGO DO FUNONÁRIO E MANDAR PARA A PROPRIEDADE DA CLASSE
-                cFuncionario.codigo_funcionario = Convert.ToInt32(codigo_funcionario.Text);
-
                 //FAZER IF PARA ATUALIZAÇÃO DO STATUS
                 if (rdbStatusAtivo.Checked)
                 {
@@ -290,7 +294,7 @@ namespace capivaras_hardware
             if (MessageBox.Show($"Deseja excluir o funcionário:{txbNome.Text}?", "Atenção!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 classFuncionario cFuncionario = new classFuncionario();
-                cFuncionario.codigo_funcionario = Convert.ToInt32(codigo_funcionario);
+                cFuncionario.codigo_funcionario = Convert.ToInt32(codigo_funcionario.Text);
 
                 int resp = cFuncionario.ExcluirFuncionario();
 
@@ -305,6 +309,8 @@ namespace capivaras_hardware
 
             }
         }
+
+
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -321,7 +327,14 @@ namespace capivaras_hardware
                 cFuncionario.nome = txbNome.Text;
                 cFuncionario.nome_social = txbNomeSocial.Text;
                 cFuncionario.foto = "";
-                cFuncionario.data_nascimento = Convert.ToDateTime(mtxbDataNascimento.Text);
+                if (!DateTime.TryParseExact(mtxbDataNascimento.Text, "dd/MM/yyyy",
+     System.Globalization.CultureInfo.InvariantCulture,
+     System.Globalization.DateTimeStyles.None, out DateTime dataNasc))
+                {
+                    MessageBox.Show("Data de nascimento inválida", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                cFuncionario.data_nascimento = dataNasc;
 
                 if (rdbSxFeminino.Checked)
                 {
