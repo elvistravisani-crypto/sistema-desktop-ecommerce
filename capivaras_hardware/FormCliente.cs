@@ -16,6 +16,7 @@ namespace capivaras_hardware
         private void Limpar()
         {
             txbNome.Clear();
+            txbNomeSocial.Clear();
             mtxbCpf.Clear();
             mtxbDataNascimento.Clear();
             mtxbCelular.Clear();
@@ -101,6 +102,7 @@ namespace capivaras_hardware
             else
             {
                 cCliente.nome = txbNome.Text;
+                cCliente.nome_social = txbNomeSocial.Text;
                 cCliente.data_nascimento = Convert.ToDateTime(mtxbDataNascimento.Text);
                 //IF PARA VERIFICAR QUAL RADIOBUTON ESTA SELECIONADA PELO USUÁRIO
                 if (rdbSxFeminino.Checked)
@@ -130,10 +132,6 @@ namespace capivaras_hardware
 
                 //CAPTURA DAS CREDENCIAIS: EMAIL E SENHA
 
-                // A NOTAÇÕS //
-
-                //para produção em um ambiente real, tratar de gerar a hash da senha para armazenar no BD
-                //A senha será transportada em texto claro para o servidor, estará protegida pela protocolo HTTPS, oque garante o transporte pelo túnel criptografado, será despejada no BD apenas a hash DELA.
                 cCliente.email = txbEmail.Text;
                 cCliente.senha = txbSenha.Text;
 
@@ -164,15 +162,13 @@ namespace capivaras_hardware
                 }
 
             }
-           
-
-
-
-
+          
 
         }
 
-
-
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            Limpar();
+        }
     }
 }

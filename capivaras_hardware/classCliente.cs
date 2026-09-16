@@ -13,6 +13,7 @@ namespace capivaras_hardware
         {
             codigo_cliente = 0;
             nome = null;
+            nome_social = null;
             cpf = null;
             data_nascimento = DateTime.Now;
             telefone = null;
@@ -33,6 +34,7 @@ namespace capivaras_hardware
         //GET LÊ OS DADOS -- SET GRAVA OS DADOS
         public int codigo_cliente { get; set; }
         public string nome { get; set; }
+        public string nome_social { get; set; }
         public string cpf { get; set; }
         public DateTime data_nascimento { get; set; }
         public string telefone { get; set; }
@@ -54,7 +56,7 @@ namespace capivaras_hardware
         //CRIAR  VARIÁVEL PARA EXECUTAR O COMANDO QUE SERÁ USADO
         public int cadastrarCliente()
         {
-            string sql = $"INSERT INTO cliente VALUES(0, '{nome}', '{cpf}', '{data_nascimento.ToString("yyyy-MM-dd")}', '{telefone}', '{endereco}', '{numero}', '{complemento}', '{bairro}', '{cidade}', '{estado}', '{cep}', '{email}', '{senha}', '{sexo}', NOW(), 1);";
+            string sql = $"INSERT INTO cliente VALUES(0, '{nome}','{nome_social}', '{cpf}', '{data_nascimento.ToString("yyyy-MM-dd")}', '{telefone}','{email}', '{endereco}', '{numero}', '{complemento}', '{bairro}', '{cidade}', '{estado}', '{cep}',  '{senha}', '{sexo}', NOW(), 1);";
             classConexao cConexao = new classConexao();
             return cConexao.ExecutaQuery(sql);
         }
