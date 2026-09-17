@@ -132,7 +132,7 @@ namespace capivaras_hardware
             int filtro = cbFiltro.SelectedIndex;
             
          
-            switch(filtro) //USUÁRIO ESCOLHO OPÇÃO E SISTEMA LÊ A POSIÇÃO DO ITEM NA LISTA (SELECTDINDEX)
+            switch(filtro) //USUÁRIO ESCOLHE A OPÇÃO E O SISTEMA LÊ A POSIÇÃO DO ITEM NA LISTA (SELECTDINDEX)
             {
                 //CARGO
                 case 1:

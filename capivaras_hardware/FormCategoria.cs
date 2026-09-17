@@ -52,6 +52,9 @@ namespace capivaras_hardware
                 if (resp == 1)
                 {
                     MessageBox.Show($"Categoria: {cCategoria.nome} cadastrado com sucesso", "Sistema Loja Hardware", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tbxNome.Clear();
+                    txbObs.Clear();
+                    tbxNome.Focus();
                     
                 }
                 else
