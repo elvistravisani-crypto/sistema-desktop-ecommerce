@@ -61,6 +61,13 @@ namespace capivaras_hardware
             return cConexao.ExecutaQuery(sql);
         }
 
+        //FILTROS DE CONSULTA DO CLIENTE
+        //FILTRAR POR NOME 
+        
+
+
+
+
 
 
 

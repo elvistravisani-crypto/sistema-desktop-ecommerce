@@ -1,7 +1,7 @@
 ﻿
 namespace capivaras_hardware
 {
-    partial class formConsFuncionario
+    partial class formConsCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,11 @@ namespace capivaras_hardware
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formConsFuncionario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formConsCliente));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTituloFuncionario = new System.Windows.Forms.Panel();
             this.btSair = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.gbConsFuncionario = new System.Windows.Forms.GroupBox();
             this.gbStatus = new System.Windows.Forms.GroupBox();
             this.rbInativo = new System.Windows.Forms.RadioButton();
@@ -59,6 +58,7 @@ namespace capivaras_hardware
             this.cbCargo = new System.Windows.Forms.ComboBox();
             this.gbCidade = new System.Windows.Forms.GroupBox();
             this.cbCidade = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.dgvFuncionario = new System.Windows.Forms.DataGridView();
             this.pnTituloFuncionario.SuspendLayout();
             this.gbConsFuncionario.SuspendLayout();
@@ -78,10 +78,10 @@ namespace capivaras_hardware
             this.pnTituloFuncionario.Controls.Add(this.btSair);
             this.pnTituloFuncionario.Controls.Add(this.lbTitulo);
             this.pnTituloFuncionario.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnTituloFuncionario.Location = new System.Drawing.Point(12, 15);
+            this.pnTituloFuncionario.Location = new System.Drawing.Point(21, 24);
             this.pnTituloFuncionario.Name = "pnTituloFuncionario";
             this.pnTituloFuncionario.Size = new System.Drawing.Size(841, 40);
-            this.pnTituloFuncionario.TabIndex = 50;
+            this.pnTituloFuncionario.TabIndex = 102;
             // 
             // btSair
             // 
@@ -95,7 +95,6 @@ namespace capivaras_hardware
             this.btSair.TabIndex = 233;
             this.btSair.Text = "X";
             this.btSair.UseVisualStyleBackColor = true;
-            this.btSair.Click += new System.EventHandler(this.btSair_Click);
             // 
             // lbTitulo
             // 
@@ -104,21 +103,9 @@ namespace capivaras_hardware
             this.lbTitulo.Location = new System.Drawing.Point(285, 3);
             this.lbTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(295, 33);
+            this.lbTitulo.Size = new System.Drawing.Size(231, 33);
             this.lbTitulo.TabIndex = 65;
-            this.lbTitulo.Text = "Consulta de Funcionários";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(199, 169);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(474, 23);
-            this.label10.TabIndex = 100;
-            this.label10.Text = "Para alterar ou excluir  um funcionário, selecione na grid!!!";
+            this.lbTitulo.Text = "Consulta de Cliente\r\n";
             // 
             // gbConsFuncionario
             // 
@@ -132,10 +119,10 @@ namespace capivaras_hardware
             this.gbConsFuncionario.Controls.Add(this.gbCargo);
             this.gbConsFuncionario.Controls.Add(this.gbCidade);
             this.gbConsFuncionario.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbConsFuncionario.Location = new System.Drawing.Point(12, 51);
+            this.gbConsFuncionario.Location = new System.Drawing.Point(21, 60);
             this.gbConsFuncionario.Name = "gbConsFuncionario";
             this.gbConsFuncionario.Size = new System.Drawing.Size(841, 110);
-            this.gbConsFuncionario.TabIndex = 49;
+            this.gbConsFuncionario.TabIndex = 101;
             this.gbConsFuncionario.TabStop = false;
             // 
             // gbStatus
@@ -241,7 +228,6 @@ namespace capivaras_hardware
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(237, 27);
             this.cbFiltro.TabIndex = 8;
-            this.cbFiltro.SelectedIndexChanged += new System.EventHandler(this.cbFiltro_SelectedIndexChanged);
             // 
             // gbCPF
             // 
@@ -296,7 +282,6 @@ namespace capivaras_hardware
             this.btPesquisar.Text = "     Pesquisar";
             this.btPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btPesquisar.UseVisualStyleBackColor = true;
-            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
             // gbNome
             // 
@@ -382,6 +367,18 @@ namespace capivaras_hardware
             this.cbCidade.Size = new System.Drawing.Size(382, 27);
             this.cbCidade.TabIndex = 50;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(208, 178);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(436, 23);
+            this.label10.TabIndex = 104;
+            this.label10.Text = "Para alterar ou excluir  um cliente, selecione na grid!!!";
+            // 
             // dgvFuncionario
             // 
             this.dgvFuncionario.AllowUserToAddRows = false;
@@ -401,7 +398,7 @@ namespace capivaras_hardware
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvFuncionario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFuncionario.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dgvFuncionario.Location = new System.Drawing.Point(12, 201);
+            this.dgvFuncionario.Location = new System.Drawing.Point(21, 210);
             this.dgvFuncionario.MultiSelect = false;
             this.dgvFuncionario.Name = "dgvFuncionario";
             this.dgvFuncionario.ReadOnly = true;
@@ -409,25 +406,20 @@ namespace capivaras_hardware
             this.dgvFuncionario.RowHeadersWidth = 51;
             this.dgvFuncionario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFuncionario.Size = new System.Drawing.Size(847, 500);
-            this.dgvFuncionario.TabIndex = 51;
-            this.dgvFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFuncionario_CellContentClick);
+            this.dgvFuncionario.TabIndex = 103;
             // 
-            // formConsFuncionario
+            // formConsCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 820);
+            this.ClientSize = new System.Drawing.Size(915, 764);
             this.Controls.Add(this.pnTituloFuncionario);
             this.Controls.Add(this.gbConsFuncionario);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dgvFuncionario);
-            this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "formConsFuncionario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "formConsFuncionario52";
-            this.Load += new System.EventHandler(this.formConsFuncionario_Load);
+            this.Name = "formConsCliente";
+            this.Text = "formConsCliente";
+            this.Load += new System.EventHandler(this.formConsCliente_Load);
             this.pnTituloFuncionario.ResumeLayout(false);
             this.pnTituloFuncionario.PerformLayout();
             this.gbConsFuncionario.ResumeLayout(false);
@@ -454,31 +446,31 @@ namespace capivaras_hardware
         private System.Windows.Forms.Panel pnTituloFuncionario;
         private System.Windows.Forms.Button btSair;
         private System.Windows.Forms.Label lbTitulo;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox gbConsFuncionario;
-        private System.Windows.Forms.GroupBox gbCidade;
-        private System.Windows.Forms.ComboBox cbCidade;
+        private System.Windows.Forms.GroupBox gbStatus;
+        private System.Windows.Forms.RadioButton rbInativo;
+        private System.Windows.Forms.RadioButton rbAtivo;
         private System.Windows.Forms.GroupBox gbDataAdmissao;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtpDataFinal;
         private System.Windows.Forms.DateTimePicker dtpDataInicial;
-        private System.Windows.Forms.GroupBox gbSexo;
-        private System.Windows.Forms.ComboBox cbSexo;
-        private System.Windows.Forms.RadioButton rbInativo;
-        private System.Windows.Forms.RadioButton rbAtivo;
         private System.Windows.Forms.GroupBox gbOpcao;
         private System.Windows.Forms.ComboBox cbFiltro;
-        private System.Windows.Forms.Button btPesquisar;
         private System.Windows.Forms.GroupBox gbCPF;
         public System.Windows.Forms.MaskedTextBox mskCpf;
+        private System.Windows.Forms.GroupBox gbSexo;
+        private System.Windows.Forms.ComboBox cbSexo;
+        private System.Windows.Forms.Button btPesquisar;
         private System.Windows.Forms.GroupBox gbNome;
+        private System.Windows.Forms.RadioButton rbContem;
+        private System.Windows.Forms.RadioButton rbInicio;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.GroupBox gbCargo;
         private System.Windows.Forms.ComboBox cbCargo;
-        private System.Windows.Forms.RadioButton rbContem;
-        private System.Windows.Forms.RadioButton rbInicio;
+        private System.Windows.Forms.GroupBox gbCidade;
+        private System.Windows.Forms.ComboBox cbCidade;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridView dgvFuncionario;
-        private System.Windows.Forms.GroupBox gbStatus;
     }
 }

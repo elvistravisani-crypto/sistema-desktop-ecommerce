@@ -162,8 +162,20 @@ namespace capivaras_hardware
             }
         }
 
+        //BOTÃO PARA ABRIR O FORMULÁRIO DE CONSULTA DO CLIENTE
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<formConsCliente>().Count() > 0)
+            {
+                MessageBox.Show("O formulário de cadastro de Produto já está aberto", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                formConsCliente Forfilho = new formConsCliente();
+                Forfilho.MdiParent = this;
+                Forfilho.Show();
+            }
 
-
-
+        }
     }
 }
