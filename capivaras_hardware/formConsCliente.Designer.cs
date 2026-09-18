@@ -1,5 +1,4 @@
-﻿
-namespace capivaras_hardware
+﻿namespace capivaras_hardware
 {
     partial class formConsCliente
     {
@@ -30,7 +29,7 @@ namespace capivaras_hardware
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formConsCliente));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnTituloFuncionario = new System.Windows.Forms.Panel();
             this.btSair = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
@@ -95,6 +94,7 @@ namespace capivaras_hardware
             this.btSair.TabIndex = 233;
             this.btSair.Text = "X";
             this.btSair.UseVisualStyleBackColor = true;
+            this.btSair.Click += new System.EventHandler(this.btSair_Click);
             // 
             // lbTitulo
             // 
@@ -170,6 +170,7 @@ namespace capivaras_hardware
             this.gbDataAdmissao.TabIndex = 114;
             this.gbDataAdmissao.TabStop = false;
             this.gbDataAdmissao.Text = "Data de Admissão:";
+            this.gbDataAdmissao.Visible = false;
             // 
             // label6
             // 
@@ -228,6 +229,7 @@ namespace capivaras_hardware
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(237, 27);
             this.cbFiltro.TabIndex = 8;
+            this.cbFiltro.SelectedIndexChanged += new System.EventHandler(this.cbFiltro_SelectedIndexChanged);
             // 
             // gbCPF
             // 
@@ -282,6 +284,7 @@ namespace capivaras_hardware
             this.btPesquisar.Text = "     Pesquisar";
             this.btPesquisar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btPesquisar.UseVisualStyleBackColor = true;
+            this.btPesquisar.Click += new System.EventHandler(this.btPesquisar_Click);
             // 
             // gbNome
             // 
@@ -346,6 +349,7 @@ namespace capivaras_hardware
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(382, 27);
             this.cbCargo.TabIndex = 50;
+            this.cbCargo.Visible = false;
             // 
             // gbCidade
             // 
@@ -389,14 +393,14 @@ namespace capivaras_hardware
             this.dgvFuncionario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvFuncionario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvFuncionario.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvFuncionario.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFuncionario.GridColor = System.Drawing.SystemColors.ControlLight;
             this.dgvFuncionario.Location = new System.Drawing.Point(21, 210);
             this.dgvFuncionario.MultiSelect = false;

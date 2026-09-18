@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace capivaras_hardware
 {
@@ -63,7 +64,70 @@ namespace capivaras_hardware
 
         //FILTROS DE CONSULTA DO CLIENTE
         //FILTRAR POR NOME 
-        
+        //FILTROS DE CONSULTA DO CLIENTE
+        //CONSULTA DE CLIENTE POR NOME (INÍCIO)
+        public DataTable ConsClienteNomeInicio(string nomei)
+        {
+            string sql = $"SELECT codigo_cliente 'ID', nome 'Nome', cpf 'CPF', data_nascimento 'Nascimento', sexo 'Sexo', cidade 'Cidade', telefone 'Telefone' FROM cliente WHERE status = 1 AND nome LIKE '{nomei}%' ORDER BY nome;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+        }
+
+        //CONSULTA DE CLIENTE POR NOME (CONTÉM)
+        public DataTable ConsClienteNomeContm(string nomec)
+        {
+            string sql = $"SELECT codigo_cliente 'ID', nome 'Nome', cpf 'CPF', data_nascimento 'Nascimento', sexo 'Sexo', cidade 'Cidade', telefone 'Telefone' FROM cliente WHERE status = 1 AND nome LIKE '%{nomec}%' ORDER BY nome;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+        }
+
+        //CONSULTA DE CLIENTE POR CIDADE
+        public DataTable ConsClienteCidade(string cidade)
+        {
+            string sql = $"SELECT codigo_cliente 'ID', nome 'Nome', cpf 'CPF', data_nascimento 'Nascimento', sexo 'Sexo', cidade 'Cidade', telefone 'Telefone' FROM cliente WHERE status = 1 AND cidade = '{cidade}' ORDER BY nome;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+        }
+
+        //CONSULTA DE CLIENTE POR CPF
+        public DataTable ConsClienteCpf(string cpf)
+        {
+            string sql = $"SELECT codigo_cliente 'ID', nome 'Nome', cpf 'CPF', data_nascimento 'Nascimento', sexo 'Sexo', cidade 'Cidade', telefone 'Telefone' FROM cliente WHERE status = 1 AND cpf = '{cpf}' ORDER BY nome;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+        }
+
+        //CONSULTA DE CLIENTE POR SEXO
+        public DataTable ConsClienteSexo(string sexo)
+        {
+            string sql = $"SELECT codigo_cliente 'ID', nome 'Nome', cpf 'CPF', data_nascimento 'Nascimento', sexo 'Sexo', cidade 'Cidade', telefone 'Telefone' FROM cliente WHERE status = 1 AND sexo = '{sexo}' ORDER BY nome;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+        }
+
+        //CONSULTA DE CLIENTE POR STATUS
+        public DataTable ConsClienteStatus(int status)
+        {
+            string sql = $"SELECT codigo_cliente 'ID', nome 'Nome', cpf 'CPF', data_nascimento 'Nascimento', sexo 'Sexo', cidade 'Cidade', telefone 'Telefone' FROM cliente WHERE status = {status} ORDER BY nome;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+        }
+
+        //MÉTODO PARA CARREGAR AS CIDADES CADASTRADAS DA TABELA DE CLIENTE NO FORM DE CONSULTA
+        public DataTable CarregarComboCidade()
+        {
+            string sql = $"SELECT DISTINCT cidade FROM cliente WHERE status = 1 ORDER BY cidade;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+        }
+
 
 
 
