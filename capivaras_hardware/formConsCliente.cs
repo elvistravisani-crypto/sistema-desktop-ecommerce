@@ -173,5 +173,13 @@ namespace capivaras_hardware
 
             }//FIM DO SWITCH
         }
+
+
+
+
+
+
+
+
     }
 }

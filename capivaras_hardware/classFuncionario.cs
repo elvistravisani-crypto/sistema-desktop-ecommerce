@@ -169,6 +169,17 @@ namespace capivaras_hardware
             classConexao cConexao = new classConexao();
             return cConexao.RetornaDados(sql);
         }
+        //MÉTODO PARA CARREGAR AS CIDADES CADASTRADAS DA TABELA DE FUNCIONÁRIO NO FORM DE CONSULTA
+        public DataTable CarregarComboCidade()
+        {
+            string sql = $"SELECT DISTINCT cidade FROM funcionario WHERE status = 1 ORDER BY cidade;";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+        }
+
+
+
 
         //MÉTODO PARA BUSCAR TODOS OS DADOS DO FUNCIONÁRIO SELECIONADO PELO USUÁRIO NO FORM DE CONSULTA
         public bool DadosFuncionario(int codigo)
@@ -183,7 +194,7 @@ namespace capivaras_hardware
             //SE A CONSULTA RETORNOU DADOS
             if (dt.Rows.Count > 0)
             {
-                //EXIBIR TODOS OS CAMOS DA TABELA FUNCIONARIO
+                //EXIBIR TODOS OS CAMPOS DA TABELA FUNCIONARIO
                 codigo_funcionario = Convert.ToInt32(dt.Rows[0]["codigo_funcionario"]);
                 nome = Convert.ToString(dt.Rows[0]["nome"]);
                 nome_social = Convert.ToString(dt.Rows[0]["nome_social"]);
@@ -233,19 +244,12 @@ namespace capivaras_hardware
 
         public int ExcluirFuncionario()
         {
-            string sql = $"DELETE FROM funcionario WHERE codigo_funcionario = {codigo_cargo}";
+            string sql = $"DELETE FROM funcionario WHERE codigo_funcionario = {codigo_funcionario}";
             classConexao cConexao = new classConexao();
             return cConexao.ExecutaQuery(sql);
         }
 
-        //MÉTODO PARA CARREGAR AS CIDADES CADASTRADAS DA TABELA DE FUNCIONÁRIO NO FORM DE CONSULTA
-        public DataTable CarregarComboCidade()
-        {
-            string sql = $"SELECT DISTINCT cidade FROM funcionario WHERE status = 1 ORDER BY cidade;";
-
-            classConexao cConexao = new classConexao();
-            return cConexao.RetornaDados(sql);
-        }
+        
 
 
 

@@ -63,8 +63,7 @@ namespace capivaras_hardware
         }
 
         //FILTROS DE CONSULTA DO CLIENTE
-        //FILTRAR POR NOME 
-        //FILTROS DE CONSULTA DO CLIENTE
+
         //CONSULTA DE CLIENTE POR NOME (INÍCIO)
         public DataTable ConsClienteNomeInicio(string nomei)
         {
@@ -119,7 +118,7 @@ namespace capivaras_hardware
             return cConexao.RetornaDados(sql);
         }
 
-        //MÉTODO PARA CARREGAR AS CIDADES CADASTRADAS DA TABELA DE CLIENTE NO FORM DE CONSULTA
+        //MÉTODO PARA CARRGAR AS CIDADES CADASTRADAS DA TABELA DE CLIENTE NO FORM DE CONSULTA
         public DataTable CarregarComboCidade()
         {
             string sql = $"SELECT DISTINCT cidade FROM cliente WHERE status = 1 ORDER BY cidade;";
@@ -127,6 +126,66 @@ namespace capivaras_hardware
             classConexao cConexao = new classConexao();
             return cConexao.RetornaDados(sql);
         }
+
+
+        //MÉTODO PARA BUSCAR TODOS OS DADOS DO CLIENTE SELECIONADO NO FORMULÁRIO DE CONSULTA
+        public bool DadosFuncionario(int codigo)
+        {
+            string sql = $"SELECT * FROM funcionario WHERE codigo_funcionario = {codigo}";
+
+            classConexao classConexao = new classConexao();
+
+            //MONTAR O DATABLE QUE RECEBERÁ TODOS OS DADOS DO CLIENTE ESCOLHIDO PELO USUÁRIO
+            DataTable dt = classConexao.RetornaDados(sql);
+
+            //SE A CONSULTA RETORNOU DADOS
+            if (dt.Rows.Count > 0)
+            {
+                //EXIBIR TODOS OS CAMPOS DA TABELA DE CLIENTE
+                codigo_cliente = Convert.ToInt32(dt.Rows[0]["codigo_funcionario"]);
+                nome = Convert.ToString(dt.Rows[0]["nome"]);
+                nome_social = Convert.ToString(dt.Rows[0]["nome_social"]);
+                cpf = Convert.ToString(dt.Rows[0]["cpf"]);
+                data_nascimento = Convert.ToDateTime(dt.Rows[0]["data_nascimento"]);
+                telefone = Convert.ToString(dt.Rows[0]["telefone_celular"]);
+                email = Convert.ToString(dt.Rows[0]["email"]);
+                endereco = Convert.ToString(dt.Rows[0]["endereco"]);
+                numero = Convert.ToInt32(dt.Rows[0]["numero"]);
+                complemento = Convert.ToString(dt.Rows[0]["complemento"]);
+                bairro = Convert.ToString(dt.Rows[0]["bairro"]);
+                cidade = Convert.ToString(dt.Rows[0]["cidade"]);
+                estado = Convert.ToString(dt.Rows[0]["estado"]);
+                cep = Convert.ToString(dt.Rows[0]["cep"]);
+                sexo = Convert.ToString(dt.Rows[0]["sexo"]);
+                data_cadastro = Convert.ToDateTime(dt.Rows[0]["data_cadastro"]);
+                status = Convert.ToInt32(dt.Rows[0]["status"]);
+
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+        }
+        //MÉTODO PARA ATUALIZAR O CLIENTE
+        public int AtualizarCliente()
+        {
+            string sql = $"UPDATE cliente SET codigo_cargo =  nome = '{nome}', nome_social= '{nome_social}', cpf = '{cpf}', data_nascimento ='{data_nascimento.ToString("yyyy-MM-dd")}', telefone = '{telefone}', email = '{email}',   endereco = '{endereco}', numero = { numero},  complemento = '{complemento}', bairro = '{bairro}', cidade = '{cidade}', estado = '{estado}', cep = '{cep}',  sexo = '{sexo}', senha = '{senha}', status = { status} WHERE codigo_cliente = { codigo_cliente };";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.ExecutaQuery(sql);
+
+        }
+        //MÉTODO PARA EXCLUIR O CLIENTE
+
+        public int ExcluirCliente()
+        {
+            string sql = $"DELETE FROM cliente WHERE codigo_cliente = {codigo_cliente}";
+            classConexao cConexao = new classConexao();
+            return cConexao.ExecutaQuery(sql);
+        }
+
 
 
 
