@@ -53,6 +53,7 @@ namespace capivaras_hardware
         private void OcultarFiltros()
         {
             gbNome.Visible = false;
+            gbCargo.Visible = false;
             gbCidade.Visible = false;
             gbCPF.Visible = false;
             gbSexo.Visible = false;
