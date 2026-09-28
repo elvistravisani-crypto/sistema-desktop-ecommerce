@@ -177,5 +177,26 @@ namespace capivaras_hardware
             }
 
         }
+
+        //BOTÃO PARA ABRIR O FORMULÁRIO DE FUNCIONÁRIO
+
+        private void funcionarioToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<formRelFuncionario>().Count() > 0)
+            {
+                MessageBox.Show("O formulário de funcionário já está aberto", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                formRelFuncionario Forfilho = new formRelFuncionario();
+                Forfilho.MdiParent = this;
+                Forfilho.Show();
+            }
+
+        }
+
+
+            
+
     }
 }

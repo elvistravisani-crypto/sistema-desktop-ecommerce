@@ -248,8 +248,29 @@ namespace capivaras_hardware
             classConexao cConexao = new classConexao();
             return cConexao.ExecutaQuery(sql);
         }
-
         
+        //MÉTODOS DE RELATÓRIO
+        //RELATÓRIO DE FUNCIONÁRIO POR IDADE
+        public DataTable RelFuncIdade(int idade1, int idade2)
+        {
+            string sql = $"SELECT funcionario.nome, funcionario.cpf, funcionario.data_nascimento, funcionario.sexo, funcionario.cidade, funcionario.telefone_celular, funcionario.data_cadastro, cargo.nome 'codigo_cargo' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = 1 AND TIMESTAMPDIFF(YEAR, funcionario.data_nascimento, NOW()) BETWEEN {idade1} AND {idade2} ORDER BY funcionario.nome; ";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+
+        }
+
+        //RELATÓRIO DE FUNCIONÁRIO POR MÊS DE ANIVERSÁRIO
+        public DataTable RelFuncNiver(int mes)
+        {
+            string sql = $"SELECT funcionario.nome, funcionario.cpf, funcionario.data_nascimento, funcionario.sexo, funcionario.cidade, funcionario.telefone_celular, funcionario.data_cadastro, cargo.nome 'codigo_cargo' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = 1 AND MONTH(funcionario.data_nascimento) = {mes} ORDER BY funcionario.nome; ";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+
+        }
+
+
 
 
 
