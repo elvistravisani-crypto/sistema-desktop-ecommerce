@@ -176,7 +176,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="relFuncionario.rdlc" />
-    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\classFuncionario.datasource" />
     <None Include="Properties\Settings.settings">

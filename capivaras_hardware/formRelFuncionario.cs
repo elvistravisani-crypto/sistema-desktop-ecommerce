@@ -43,8 +43,23 @@ namespace capivaras_hardware
             cbMes.Items.Add("Dezembro");
             cbMes.SelectedIndex = 0;
             this.rvFuncionario.RefreshReport();
+
             //this.reportViewer2.RefreshReport();
+            // CMB CARGO - TRAZER DADOS DA TABELA CARGO DO BANCO DE DADOS
+            classCargo cCargo = new classCargo();
+            cbCargo.DataSource = cCargo.CarregarComboCargo();
+            cbCargo.DisplayMember = "nome";
+            cbCargo.ValueMember = "codigo_cargo";
+            cbCargo.SelectedIndex = -1;
+
+            //CARREGAR COMBO CIDADE
+            classFuncionario cFuncionario = new classFuncionario();
+            cbCidade.DataSource = cFuncionario.CarregarComboCidade();
+            cbCidade.DisplayMember = "cidade";
+            cbCidade.ValueMember = "cidade";
+            cbCidade.SelectedIndex = 0;
         }
+
 
         private void cbTipoRel_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -126,8 +141,33 @@ namespace capivaras_hardware
                     break;
 
 
+                case "Cargo":
+                    if (cbCargo.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Favor selecionar um cargo", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        classFuncionarioBindingSource.DataSource = cFuncionario.RelFuncCargo(Convert.ToInt32(cbCargo.SelectedValue));
+                        this.rvFuncionario.RefreshReport();
+                    }
+                    break;
 
-                //Aniversariantes do mês
+
+                case "Cidade":
+                    if (cbCidade.SelectedIndex == -1)
+                    {
+                        MessageBox.Show("Favor selecionar uma cidade", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        classFuncionarioBindingSource.DataSource = cFuncionario.RelFuncCidade(Convert.ToString(cbCidade.SelectedValue));
+                        this.rvFuncionario.RefreshReport();
+                    }
+                    break;
+
+
+                //ANIVERSARIANTES DO MÊS
                 default:
                     if(cbMes.SelectedIndex == 0)
                     {
@@ -142,6 +182,11 @@ namespace capivaras_hardware
             }
 
         }
+
+
+
+
+
 
 
 
