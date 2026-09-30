@@ -58,6 +58,8 @@ namespace capivaras_hardware
             cbCidade.DisplayMember = "cidade";
             cbCidade.ValueMember = "cidade";
             cbCidade.SelectedIndex = 0;
+
+            
         }
 
 
@@ -165,6 +167,30 @@ namespace capivaras_hardware
                         this.rvFuncionario.RefreshReport();
                     }
                     break;
+
+                case "Status":
+                    if (!rbAtivo.Checked && !rbInativo.Checked)
+                    {
+                        MessageBox.Show("Por favor, selecione um filtro de status!", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+                        if (rbAtivo.Checked)
+                        {
+                            cFuncionario.status = 1;
+                        }
+                        else if (rbInativo.Checked)
+                        {
+                            cFuncionario.status = 0;
+                        }
+
+                        classFuncionarioBindingSource.DataSource = cFuncionario.RelFuncStatus(cFuncionario.status);
+                        this.rvFuncionario.RefreshReport();
+                    }
+                    break;
+
+
+
 
 
                 //ANIVERSARIANTES DO MÊS

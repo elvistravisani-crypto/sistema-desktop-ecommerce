@@ -43,13 +43,14 @@ namespace capivaras_hardware
             this.funcionarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnPriRel = new System.Windows.Forms.ToolStripMenuItem();
+            this.funcionarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mnPriVen = new System.Windows.Forms.ToolStripMenuItem();
             this.mnPriSai = new System.Windows.Forms.ToolStripMenuItem();
             this.timerPrincipal = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statuslbData = new System.Windows.Forms.ToolStripStatusLabel();
             this.statuslbHora = new System.Windows.Forms.ToolStripStatusLabel();
-            this.funcionarioToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -91,7 +92,7 @@ namespace capivaras_hardware
             this.mnBtnCadCli.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadCli.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadCli.Name = "mnBtnCadCli";
-            this.mnBtnCadCli.Size = new System.Drawing.Size(160, 22);
+            this.mnBtnCadCli.Size = new System.Drawing.Size(180, 22);
             this.mnBtnCadCli.Text = "Clientes";
             this.mnBtnCadCli.Click += new System.EventHandler(this.btnCadCliMenu_Click);
             // 
@@ -100,7 +101,7 @@ namespace capivaras_hardware
             this.mnBtnCadFun.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadFun.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadFun.Name = "mnBtnCadFun";
-            this.mnBtnCadFun.Size = new System.Drawing.Size(160, 22);
+            this.mnBtnCadFun.Size = new System.Drawing.Size(180, 22);
             this.mnBtnCadFun.Text = "Funcionarios";
             this.mnBtnCadFun.Click += new System.EventHandler(this.cadFuncionarios_Click);
             // 
@@ -109,7 +110,7 @@ namespace capivaras_hardware
             this.mnBtnCadCar.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadCar.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadCar.Name = "mnBtnCadCar";
-            this.mnBtnCadCar.Size = new System.Drawing.Size(160, 22);
+            this.mnBtnCadCar.Size = new System.Drawing.Size(180, 22);
             this.mnBtnCadCar.Text = "Cargos";
             this.mnBtnCadCar.Click += new System.EventHandler(this.cadCargo_Click);
             // 
@@ -118,7 +119,7 @@ namespace capivaras_hardware
             this.mnBtnCadPro.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadPro.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadPro.Name = "mnBtnCadPro";
-            this.mnBtnCadPro.Size = new System.Drawing.Size(160, 22);
+            this.mnBtnCadPro.Size = new System.Drawing.Size(180, 22);
             this.mnBtnCadPro.Text = "Produtos";
             this.mnBtnCadPro.Click += new System.EventHandler(this.mnBtnCadPro_Click);
             // 
@@ -127,7 +128,7 @@ namespace capivaras_hardware
             this.mnBtnCadCat.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadCat.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadCat.Name = "mnBtnCadCat";
-            this.mnBtnCadCat.Size = new System.Drawing.Size(160, 22);
+            this.mnBtnCadCat.Size = new System.Drawing.Size(180, 22);
             this.mnBtnCadCat.Text = "Categorias";
             this.mnBtnCadCat.Click += new System.EventHandler(this.mnBtnCadCat_Click);
             // 
@@ -136,7 +137,7 @@ namespace capivaras_hardware
             this.mnBtnCadMar.BackColor = System.Drawing.Color.Black;
             this.mnBtnCadMar.ForeColor = System.Drawing.Color.White;
             this.mnBtnCadMar.Name = "mnBtnCadMar";
-            this.mnBtnCadMar.Size = new System.Drawing.Size(160, 22);
+            this.mnBtnCadMar.Size = new System.Drawing.Size(180, 22);
             this.mnBtnCadMar.Text = "Marcas";
             this.mnBtnCadMar.Click += new System.EventHandler(this.mnBtnCadMar_Click);
             // 
@@ -154,27 +155,35 @@ namespace capivaras_hardware
             // funcionarioToolStripMenuItem
             // 
             this.funcionarioToolStripMenuItem.Name = "funcionarioToolStripMenuItem";
-            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.funcionarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.funcionarioToolStripMenuItem.Text = "Funcionario";
             this.funcionarioToolStripMenuItem.Click += new System.EventHandler(this.funcionarioToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // mnPriRel
             // 
             this.mnPriRel.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.funcionarioToolStripMenuItem1});
+            this.funcionarioToolStripMenuItem1,
+            this.clienteToolStripMenuItem1});
             this.mnPriRel.ForeColor = System.Drawing.Color.White;
             this.mnPriRel.Image = ((System.Drawing.Image)(resources.GetObject("mnPriRel.Image")));
             this.mnPriRel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mnPriRel.Name = "mnPriRel";
             this.mnPriRel.Size = new System.Drawing.Size(136, 54);
             this.mnPriRel.Text = "Relatórios";
+            // 
+            // funcionarioToolStripMenuItem1
+            // 
+            this.funcionarioToolStripMenuItem1.Name = "funcionarioToolStripMenuItem1";
+            this.funcionarioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.funcionarioToolStripMenuItem1.Text = "Funcionario";
+            this.funcionarioToolStripMenuItem1.Click += new System.EventHandler(this.funcionarioToolStripMenuItem1_Click);
             // 
             // mnPriVen
             // 
@@ -223,12 +232,12 @@ namespace capivaras_hardware
             this.statuslbHora.Size = new System.Drawing.Size(42, 20);
             this.statuslbHora.Text = "Hora";
             // 
-            // funcionarioToolStripMenuItem1
+            // clienteToolStripMenuItem1
             // 
-            this.funcionarioToolStripMenuItem1.Name = "funcionarioToolStripMenuItem1";
-            this.funcionarioToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.funcionarioToolStripMenuItem1.Text = "Funcionario";
-            this.funcionarioToolStripMenuItem1.Click += new System.EventHandler(this.funcionarioToolStripMenuItem1_Click);
+            this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
+            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.clienteToolStripMenuItem1.Text = "Cliente";
+            this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click);
             // 
             // FormPrincipal
             // 
@@ -274,6 +283,7 @@ namespace capivaras_hardware
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem funcionarioToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem1;
     }
 }
 

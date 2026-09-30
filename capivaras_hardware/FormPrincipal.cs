@@ -195,8 +195,23 @@ namespace capivaras_hardware
 
         }
 
+        private void clienteToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //BOTÃO PARA ABRIR O FORMULÁRIO DE CLIENTE
 
-            
 
+            if (Application.OpenForms.OfType<formRelCliente>().Count() > 0)
+            {
+                MessageBox.Show("O formulário de cliente já está aberto", "Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                formRelCliente Forfilho = new formRelCliente();
+                Forfilho.MdiParent = this;
+                Forfilho.Show();
+            }
+
+
+        }        
     }
 }

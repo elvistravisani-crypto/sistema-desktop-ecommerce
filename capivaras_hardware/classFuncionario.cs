@@ -282,13 +282,23 @@ namespace capivaras_hardware
         //RELATÓRIO DE FUNCIONÁRIO POR CIDADE
         public DataTable RelFuncCidade(string cidade)
         {
-            string sql = $"SELECT funcionario.nome, funcionario.cpf, funcionario.data_nascimento, funcionario.sexo, funcionario.cidade, funcionario.telefone_celular, funcionario.data_cadastro, cargo.nome 'codigo_cargo' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = 1 AND funcionario.codigo_cargo = {cidade} ORDER BY funcionario.nome; ";
+            string sql = $"SELECT funcionario.nome, funcionario.cpf, funcionario.data_nascimento, funcionario.sexo, funcionario.cidade, funcionario.telefone_celular, funcionario.data_cadastro, cargo.nome 'codigo_cargo' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = 1 AND funcionario.cidade = '{cidade}' ORDER BY funcionario.nome; ";
 
             classConexao cConexao = new classConexao();
             return cConexao.RetornaDados(sql);
         }
 
+
         //RELATÓRIO DE FUNCIONÁRIO POR STATUS
+        public DataTable RelFuncStatus(int status)
+        {
+            string sql = $"SELECT funcionario.nome, funcionario.cpf, funcionario.data_nascimento, funcionario.sexo, funcionario.cidade, funcionario.telefone_celular, funcionario.data_cadastro, cargo.nome 'codigo_cargo' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = {status} ORDER BY funcionario.nome; ";
+
+            classConexao cConexao = new classConexao();
+            return cConexao.RetornaDados(sql);
+        }
+
+       //
 
 
 

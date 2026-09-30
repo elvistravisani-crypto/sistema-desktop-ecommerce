@@ -1,6 +1,7 @@
-﻿namespace capivaras_hardware
+﻿
+namespace capivaras_hardware
 {
-    partial class formRelFuncionario
+    partial class formRelCliente
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +30,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formRelFuncionario));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formRelCliente));
+            this.gbTipoRel = new System.Windows.Forms.GroupBox();
+            this.cbTipoRel = new System.Windows.Forms.ComboBox();
             this.gbCargo = new System.Windows.Forms.GroupBox();
             this.cbCargo = new System.Windows.Forms.ComboBox();
             this.btGerarRelatorio = new System.Windows.Forms.Button();
-            this.cbTipoRel = new System.Windows.Forms.ComboBox();
             this.gbCidade = new System.Windows.Forms.GroupBox();
             this.cbCidade = new System.Windows.Forms.ComboBox();
             this.gbAniversariantes = new System.Windows.Forms.GroupBox();
@@ -50,18 +51,39 @@
             this.pnTituloFuncionario = new System.Windows.Forms.Panel();
             this.btSair = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
-            this.gbTipoRel = new System.Windows.Forms.GroupBox();
-            this.rvFuncionario = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.rvCliente = new Microsoft.Reporting.WinForms.ReportViewer();
             this.classFuncionarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gbTipoRel.SuspendLayout();
             this.gbCargo.SuspendLayout();
             this.gbCidade.SuspendLayout();
             this.gbAniversariantes.SuspendLayout();
             this.gbIdade.SuspendLayout();
             this.gbStatus.SuspendLayout();
             this.pnTituloFuncionario.SuspendLayout();
-            this.gbTipoRel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.classFuncionarioBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // gbTipoRel
+            // 
+            this.gbTipoRel.Controls.Add(this.cbTipoRel);
+            this.gbTipoRel.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbTipoRel.Location = new System.Drawing.Point(12, 52);
+            this.gbTipoRel.Name = "gbTipoRel";
+            this.gbTipoRel.Size = new System.Drawing.Size(207, 66);
+            this.gbTipoRel.TabIndex = 142;
+            this.gbTipoRel.TabStop = false;
+            this.gbTipoRel.Text = "Selecione o Relatório:";
+            // 
+            // cbTipoRel
+            // 
+            this.cbTipoRel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoRel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTipoRel.FormattingEnabled = true;
+            this.cbTipoRel.Location = new System.Drawing.Point(7, 26);
+            this.cbTipoRel.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTipoRel.Name = "cbTipoRel";
+            this.cbTipoRel.Size = new System.Drawing.Size(187, 27);
+            this.cbTipoRel.TabIndex = 130;
             // 
             // gbCargo
             // 
@@ -70,7 +92,7 @@
             this.gbCargo.Location = new System.Drawing.Point(12, 196);
             this.gbCargo.Name = "gbCargo";
             this.gbCargo.Size = new System.Drawing.Size(207, 66);
-            this.gbCargo.TabIndex = 128;
+            this.gbCargo.TabIndex = 140;
             this.gbCargo.TabStop = false;
             this.gbCargo.Text = "Cargo:";
             // 
@@ -95,22 +117,9 @@
             this.btGerarRelatorio.Name = "btGerarRelatorio";
             this.btGerarRelatorio.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.btGerarRelatorio.Size = new System.Drawing.Size(207, 57);
-            this.btGerarRelatorio.TabIndex = 131;
+            this.btGerarRelatorio.TabIndex = 141;
             this.btGerarRelatorio.Text = "   Gerar Relatório";
             this.btGerarRelatorio.UseVisualStyleBackColor = true;
-            this.btGerarRelatorio.Click += new System.EventHandler(this.btGerarRelatorio_Click);
-            // 
-            // cbTipoRel
-            // 
-            this.cbTipoRel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTipoRel.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTipoRel.FormattingEnabled = true;
-            this.cbTipoRel.Location = new System.Drawing.Point(7, 26);
-            this.cbTipoRel.Margin = new System.Windows.Forms.Padding(4);
-            this.cbTipoRel.Name = "cbTipoRel";
-            this.cbTipoRel.Size = new System.Drawing.Size(187, 27);
-            this.cbTipoRel.TabIndex = 130;
-            this.cbTipoRel.SelectedIndexChanged += new System.EventHandler(this.cbTipoRel_SelectedIndexChanged);
             // 
             // gbCidade
             // 
@@ -119,7 +128,7 @@
             this.gbCidade.Location = new System.Drawing.Point(12, 268);
             this.gbCidade.Name = "gbCidade";
             this.gbCidade.Size = new System.Drawing.Size(207, 66);
-            this.gbCidade.TabIndex = 127;
+            this.gbCidade.TabIndex = 139;
             this.gbCidade.TabStop = false;
             this.gbCidade.Text = "Cidade:";
             // 
@@ -140,7 +149,7 @@
             this.gbAniversariantes.Location = new System.Drawing.Point(12, 124);
             this.gbAniversariantes.Name = "gbAniversariantes";
             this.gbAniversariantes.Size = new System.Drawing.Size(207, 66);
-            this.gbAniversariantes.TabIndex = 125;
+            this.gbAniversariantes.TabIndex = 138;
             this.gbAniversariantes.TabStop = false;
             this.gbAniversariantes.Text = "Aniversariantes Mês:";
             // 
@@ -164,7 +173,7 @@
             this.gbIdade.Location = new System.Drawing.Point(12, 340);
             this.gbIdade.Name = "gbIdade";
             this.gbIdade.Size = new System.Drawing.Size(206, 66);
-            this.gbIdade.TabIndex = 124;
+            this.gbIdade.TabIndex = 137;
             this.gbIdade.TabStop = false;
             this.gbIdade.Text = "Idade";
             // 
@@ -173,7 +182,7 @@
             this.txtIdadeFinal.Location = new System.Drawing.Point(140, 25);
             this.txtIdadeFinal.MaxLength = 3;
             this.txtIdadeFinal.Name = "txtIdadeFinal";
-            this.txtIdadeFinal.Size = new System.Drawing.Size(50, 27);
+            this.txtIdadeFinal.Size = new System.Drawing.Size(50, 20);
             this.txtIdadeFinal.TabIndex = 45;
             // 
             // txtIdadeInicial
@@ -181,7 +190,7 @@
             this.txtIdadeInicial.Location = new System.Drawing.Point(46, 25);
             this.txtIdadeInicial.MaxLength = 3;
             this.txtIdadeInicial.Name = "txtIdadeInicial";
-            this.txtIdadeInicial.Size = new System.Drawing.Size(50, 27);
+            this.txtIdadeInicial.Size = new System.Drawing.Size(50, 20);
             this.txtIdadeInicial.TabIndex = 44;
             // 
             // label13
@@ -214,7 +223,7 @@
             this.gbStatus.Location = new System.Drawing.Point(11, 412);
             this.gbStatus.Name = "gbStatus";
             this.gbStatus.Size = new System.Drawing.Size(207, 66);
-            this.gbStatus.TabIndex = 122;
+            this.gbStatus.TabIndex = 136;
             this.gbStatus.TabStop = false;
             this.gbStatus.Text = "Status:";
             // 
@@ -247,7 +256,7 @@
             this.pnTituloFuncionario.Location = new System.Drawing.Point(12, 12);
             this.pnTituloFuncionario.Name = "pnTituloFuncionario";
             this.pnTituloFuncionario.Size = new System.Drawing.Size(1062, 34);
-            this.pnTituloFuncionario.TabIndex = 121;
+            this.pnTituloFuncionario.TabIndex = 135;
             // 
             // btSair
             // 
@@ -261,7 +270,6 @@
             this.btSair.TabIndex = 234;
             this.btSair.Text = "X";
             this.btSair.UseVisualStyleBackColor = true;
-            this.btSair.Click += new System.EventHandler(this.btSair_Click);
             // 
             // lbTitulo
             // 
@@ -270,43 +278,29 @@
             this.lbTitulo.Location = new System.Drawing.Point(408, 2);
             this.lbTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(270, 29);
+            this.lbTitulo.Size = new System.Drawing.Size(211, 29);
             this.lbTitulo.TabIndex = 65;
-            this.lbTitulo.Text = "Relatório de Funcionários";
+            this.lbTitulo.Text = "Relatório de Cliente\r\n";
             // 
-            // gbTipoRel
+            // rvCliente
             // 
-            this.gbTipoRel.Controls.Add(this.cbTipoRel);
-            this.gbTipoRel.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbTipoRel.Location = new System.Drawing.Point(12, 52);
-            this.gbTipoRel.Name = "gbTipoRel";
-            this.gbTipoRel.Size = new System.Drawing.Size(207, 66);
-            this.gbTipoRel.TabIndex = 133;
-            this.gbTipoRel.TabStop = false;
-            this.gbTipoRel.Text = "Selecione o Relatório:";
-            // 
-            // rvFuncionario
-            // 
-            reportDataSource1.Name = "dsFuncionario";
-            reportDataSource1.Value = this.classFuncionarioBindingSource;
-            this.rvFuncionario.LocalReport.DataSources.Add(reportDataSource1);
-            this.rvFuncionario.LocalReport.ReportEmbeddedResource = "capivaras_hardware.relFuncionario.rdlc";
-            this.rvFuncionario.Location = new System.Drawing.Point(238, 78);
-            this.rvFuncionario.Name = "rvFuncionario";
-            this.rvFuncionario.ServerReport.BearerToken = null;
-            this.rvFuncionario.Size = new System.Drawing.Size(963, 455);
-            this.rvFuncionario.TabIndex = 134;
+            this.rvCliente.LocalReport.ReportEmbeddedResource = "capivaras_hardware.relCliente.rdlc";
+            this.rvCliente.Location = new System.Drawing.Point(225, 64);
+            this.rvCliente.Name = "rvCliente";
+            this.rvCliente.ServerReport.BearerToken = null;
+            this.rvCliente.Size = new System.Drawing.Size(984, 549);
+            this.rvCliente.TabIndex = 143;
             // 
             // classFuncionarioBindingSource
             // 
             this.classFuncionarioBindingSource.DataSource = typeof(capivaras_hardware.classFuncionario);
             // 
-            // formRelFuncionario
+            // formRelCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 575);
-            this.Controls.Add(this.rvFuncionario);
+            this.ClientSize = new System.Drawing.Size(1221, 625);
+            this.Controls.Add(this.rvCliente);
             this.Controls.Add(this.gbTipoRel);
             this.Controls.Add(this.gbCargo);
             this.Controls.Add(this.btGerarRelatorio);
@@ -315,12 +309,10 @@
             this.Controls.Add(this.gbIdade);
             this.Controls.Add(this.gbStatus);
             this.Controls.Add(this.pnTituloFuncionario);
-            this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "formRelFuncionario";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "formRelFuncionario";
-            this.Load += new System.EventHandler(this.formRelFuncionario_Load);
+            this.Name = "formRelCliente";
+            this.Text = "formRelCliente";
+            this.Load += new System.EventHandler(this.formRelCliente_Load);
+            this.gbTipoRel.ResumeLayout(false);
             this.gbCargo.ResumeLayout(false);
             this.gbCidade.ResumeLayout(false);
             this.gbAniversariantes.ResumeLayout(false);
@@ -330,18 +322,17 @@
             this.gbStatus.PerformLayout();
             this.pnTituloFuncionario.ResumeLayout(false);
             this.pnTituloFuncionario.PerformLayout();
-            this.gbTipoRel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.classFuncionarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
+        private System.Windows.Forms.GroupBox gbTipoRel;
+        public System.Windows.Forms.ComboBox cbTipoRel;
         private System.Windows.Forms.GroupBox gbCargo;
         private System.Windows.Forms.ComboBox cbCargo;
         private System.Windows.Forms.Button btGerarRelatorio;
-        public System.Windows.Forms.ComboBox cbTipoRel;
         private System.Windows.Forms.GroupBox gbCidade;
         private System.Windows.Forms.ComboBox cbCidade;
         private System.Windows.Forms.GroupBox gbAniversariantes;
@@ -355,10 +346,9 @@
         private System.Windows.Forms.RadioButton rbInativo;
         private System.Windows.Forms.RadioButton rbAtivo;
         private System.Windows.Forms.Panel pnTituloFuncionario;
-        private System.Windows.Forms.Label lbTitulo;
-        private System.Windows.Forms.GroupBox gbTipoRel;
         private System.Windows.Forms.Button btSair;
-        private Microsoft.Reporting.WinForms.ReportViewer rvFuncionario;
+        private System.Windows.Forms.Label lbTitulo;
+        private Microsoft.Reporting.WinForms.ReportViewer rvCliente;
         private System.Windows.Forms.BindingSource classFuncionarioBindingSource;
     }
 }
