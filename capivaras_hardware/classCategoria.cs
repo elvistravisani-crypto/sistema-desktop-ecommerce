@@ -40,6 +40,20 @@ namespace capivaras_hardware
 
 
         }
+        //MÉTODO PARA CARREGAR AS CATEGORIAS NO FORMULÁRIO DE PRODUTO
+
+        public DataTable CarregarComboCategoria()
+        {
+            string sql = "SELECT codigo_categoria, nome FROM categoria WHERE status = 1 ORDER BY nome;";
+
+
+            //CRIAR O OBJETO DA CLASSE CONEXAO 
+
+            classConexao cConexao = new classConexao();
+
+            return cConexao.RetornaDados(sql);
+        }
+
 
 
 

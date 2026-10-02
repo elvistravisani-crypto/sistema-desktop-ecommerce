@@ -72,7 +72,10 @@
     <Compile Include="classCliente.cs" />
     <Compile Include="classConexao.cs" />
     <Compile Include="classFuncionario.cs" />
+    <Compile Include="classItensPedido.cs" />
     <Compile Include="classMarca.cs" />
+    <Compile Include="classPedido.cs" />
+    <Compile Include="classProduto.cs" />
     <Compile Include="FormCargo.cs">
       <SubType>Form</SubType>
     </Compile>

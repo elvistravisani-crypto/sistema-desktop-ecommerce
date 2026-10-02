@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 
 
+
 namespace capivaras_hardware
 {
     class classMarca
@@ -19,6 +20,7 @@ namespace capivaras_hardware
             status = 1;
 
         }
+
         public int codigo_marca { get; set; }
         public string nome { get; set; }
         public string descricao { get; set; }
@@ -37,6 +39,17 @@ namespace capivaras_hardware
 
 
 
+        }
+        public DataTable CarregarComboMarca()
+        {
+            string sql = "SELECT codigo_marca, nome FROM marca WHERE status = 1 ORDER BY nome;";
+
+
+            //CRIAR O OBJETO DA CLASSE CONEXAO 
+
+            classConexao cConexao = new classConexao();
+
+            return cConexao.RetornaDados(sql);
         }
 
 

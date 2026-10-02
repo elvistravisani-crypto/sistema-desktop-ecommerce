@@ -54,7 +54,7 @@ namespace capivaras_hardware
 
 
 
-        //CRIAR  VARIÁVEL PARA EXECUTAR O COMANDO QUE SERÁ USADO
+        //CRIAR  COMANDO QUE SERÁ USADO PARA CADASTRAR O CLIENTE
         public int cadastrarCliente()
         {
             string sql = $"INSERT INTO cliente VALUES(0, '{nome}','{nome_social}', '{cpf}', '{data_nascimento.ToString("yyyy-MM-dd")}', '{telefone}','{email}', '{endereco}', '{numero}', '{complemento}', '{bairro}', '{cidade}', '{estado}', '{cep}',  '{senha}', '{sexo}', NOW(), 1);";
