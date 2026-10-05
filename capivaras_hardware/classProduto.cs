@@ -47,7 +47,7 @@ namespace capivaras_hardware
 
         public int cadastrarProduto()
         {
-            string sql = $"INSERT INTO produto VALUES (0,  {codigo_categoria}, {codigo_marca}, '{nome}', {valor_faturamento}, {preco_produto}, NOW(), '{descricao}', {valor_lucro}, {valor_desconto} 1, '{ft_produto_1}', '{ft_produto_2}', '{ft_produto_3}',)";
+            string sql = $"INSERT INTO produto VALUES (0,  {codigo_categoria}, {codigo_marca}, '{nome}', {valor_faturamento}, {preco_produto}, NOW(), '{descricao}', {valor_lucro}, {valor_desconto}, 1, '{ft_produto_1}', '{ft_produto_2}', '{ft_produto_3}')";
 
             classConexao cConexao = new classConexao();
             return cConexao.ExecutaQuery(sql);

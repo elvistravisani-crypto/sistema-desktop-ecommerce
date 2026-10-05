@@ -358,6 +358,7 @@ namespace capivaras_hardware
             this.txbLucro.Name = "txbLucro";
             this.txbLucro.Size = new System.Drawing.Size(74, 29);
             this.txbLucro.TabIndex = 22;
+            this.txbLucro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPreco_KeyPress);
             // 
             // label7
             // 
@@ -400,6 +401,7 @@ namespace capivaras_hardware
             this.txbDesconto.Name = "txbDesconto";
             this.txbDesconto.Size = new System.Drawing.Size(74, 29);
             this.txbDesconto.TabIndex = 8;
+            this.txbDesconto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPreco_KeyPress);
             // 
             // txbFaturamento
             // 
@@ -409,6 +411,7 @@ namespace capivaras_hardware
             this.txbFaturamento.Name = "txbFaturamento";
             this.txbFaturamento.Size = new System.Drawing.Size(74, 29);
             this.txbFaturamento.TabIndex = 7;
+            this.txbFaturamento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPreco_KeyPress);
             // 
             // txbPreco
             // 
@@ -418,6 +421,7 @@ namespace capivaras_hardware
             this.txbPreco.Name = "txbPreco";
             this.txbPreco.Size = new System.Drawing.Size(74, 29);
             this.txbPreco.TabIndex = 6;
+            this.txbPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPreco_KeyPress);
             // 
             // panel3
             // 
