@@ -94,7 +94,7 @@ namespace capivaras_hardware
         /* FILTROS: NOME(INÍCIO E CONTÉM), SEXO, CIDADE, CARGO, CPF, DATA ADMISSÃO E STATUS */
         /* CAMPOS EXIBIDOS NA CONSULTA: CODIGO, NOME, CPF, NASCIMENTO, CARGO, SEXO, CIDADE E CELULAR */
 
-        //CONSUTA DE FUNCIONÁRIO POR NOME (INÍCIO)
+        //CONSULTA DE FUNCIONÁRIO POR NOME (INÍCIO)
         public DataTable ConsFuncNomeInicio(string nomei)
         {
             string sql = $"SELECT funcionario.codigo_funcionario 'ID', funcionario.nome 'Nome', funcionario.cpf 'CPF', funcionario.data_nascimento 'Nascimento', cargo.nome 'Cargo', funcionario.sexo 'Sexo', funcionario.cidade 'Cidade', funcionario.telefone_celular 'Celular' FROM funcionario JOIN cargo ON funcionario.codigo_cargo = cargo.codigo_cargo WHERE funcionario.status = 1 AND funcionario.nome LIKE '{nomei}%' ORDER BY funcionario.nome;";

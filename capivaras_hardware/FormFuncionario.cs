@@ -254,6 +254,7 @@ namespace capivaras_hardware
                 {
                     cFuncionario.tipo_acesso = 0;
                 }
+
                 else
                 {
                     cFuncionario.tipo_acesso = 1;
@@ -269,6 +270,7 @@ namespace capivaras_hardware
                 {
                     cFuncionario.status = 1;
                 }
+
                 else
                 {
                     cFuncionario.status = 0;
